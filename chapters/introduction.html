@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Introduction</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../js/collapsible.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>Navigation</h2>
+  <a href="../index.html">Home</a>
+  <a href="introduction.html">Introduction</a>
+  <a href="ch01_postulates.html">Postulates</a>
+  <a href="ch02_bloch.html">Bloch Sphere</a>
+  <a href="ch03_time.html">Time Evolution</a>
+  <a href="ch04_stationary.html">Stationary States</a>
+  <a href="ch05_hamiltonian.html">Example Hamiltonian</a>
+</div>
+
+<div class="content">
+
+<h1>All the Physics You Need for Ion-Trapped Quantum Computing</h1>
+<h2>A Beginner-Friendly Guide to Ion-Trap Quantum Computing</h2>
+<h3>By Quinton Rice</h3>
+
+<hr>
+
+<h2>Motivation</h2>
+
+<p>
+You may have heard of quantum computing, or you may be interested in the future of quantum information science. 
+You might also be familiar with classical computers since the majority of us have one either in our pocket (cellphone) 
+or somewhere close by (laptop/desktop). Have you ever stopped to wonder how these devices work on a fundamental level? 
+How can a combination of circuits and microchips be combined to give us the most technologically advanced device in human history?
+This book will not answer that question. Instead, we note that since it is possible to create such a device using classical techniques, 
+it should also be possible to use quantum techniques. The quantum approach brings both advantages and disadvantages.
+</p>
+
+<p>
+You may recall images of the very first classical computers—giant refrigerator-shaped machines that filled entire rooms and required 
+teams of scientists to operate. These computers were so large because they used vacuum tube technology as the building block for computation. 
+A vacuum tube is exactly what it sounds like: an enclosed glass tube in which all the air has been removed. Inside there are three components:
+</p>
+
+<ol>
+<li><b>Cathode:</b> a heated wire that emits electrons through thermionic emission.</li>
+<li><b>Anode:</b> a positively charged metal surface that attracts the electrons.</li>
+<li><b>Control grid:</b> a fine metal mesh placed between the cathode and anode.</li>
+</ol>
+
+<p>
+The cathode is connected to the negative terminal of a power supply, while the anode is connected to the positive terminal. 
+The control grid can be neutral or negatively charged; if neutral, electrons flow freely to the anode (“on”), and if negative, electrons are repelled (“off”).  
+This forms the basic binary switch needed for digital computation.
+</p>
+
+<!-- FIGURE PLACEHOLDER -->
+<p><i>[Figure Placeholder: Illustration of primitive triode vacuum tube]</i></p>
+
+<p>
+Some early digital computers used around 17,000 vacuum tubes, each a few inches in size. These were essentially tiny light bulbs, consuming significant power and generating heat.
+</p>
+
+<p>
+In 1947, John Bardeen, Walter Brattain, and William Shockley built the first transistor. The transistor plays the same logical role as the vacuum tube, 
+only now it is a solid-state semiconductor device. The simplest type is the bipolar junction transistor (BJT), operationally identical to the vacuum tube. 
+Its components are:
+</p>
+
+<ol>
+<li><b>Emitter</b>: source of electrons.</li>
+<li><b>Collector</b>: receives electrons.</li>
+<li><b>Base</b>: controls electron flow based on applied voltage.</li>
+</ol>
+
+<p>
+In an NPN transistor, the emitter and collector are n-type semiconductors (excess electrons), while the base is p-type (excess holes). 
+Doping and voltage control determine whether current flows (“on”) or not (“off”). This is the basis of classical bits.
+</p>
+
+<p>
+As transistor sizes shrank to nanometer scales—approaching fewer than one hundred atoms in length—quantum effects such as tunneling and interference 
+became unavoidable. Instead of fighting these effects, physicists embraced them as the foundation for a fundamentally new type of computer: 
+the quantum computer.
+</p>
+
+<p>
+A quantum computer switches between <i>quantum</i> states rather than classical states. Quantum states can exist in superpositions, 
+meaning they can be both “on” and “off” simultaneously before measurement. Consider a light switch analogy: classically it is either “on” or “off,” 
+but a quantum light switch can be in between until it is measured. The power of quantum computing lies in manipulating states before measurement.
+</p>
+
+<p><b>Warning:</b> This book contains math—vectors, complex numbers, linear algebra, and differential equations.  
+It also derives equations without skipping many steps because this is not merely a textbook; it's a guide.</p>
+
+</div>
+</body>
+</html>
 

@@ -1,0 +1,9 @@
+
+body { margin:0; font-family:Georgia,serif; background:#f8f8f8; }
+.sidebar { height:100%; width:260px; position:fixed; background:#1e3d59; padding-top:20px; color:white; }
+.sidebar a { padding:10px 20px; display:block; color:white; text-decoration:none; }
+.sidebar a:hover { background:#3e5f7d; }
+.content { margin-left:280px; padding:20px; }
+.collapsible { background:#235784; color:white; cursor:pointer; padding:10px; border:none; text-align:left; margin-top:10px; width:100%; }
+.active, .collapsible:hover { background:#1d466a; }
+.content-box { padding:0 15px; display:none; background:white; border-left:3px solid #235784; }

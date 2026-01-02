@@ -17,6 +17,7 @@ Part I: Essential Physics for Quantum Computing
      •	Micromotion vs. Secular Motion
   
 Part II: Computing with Trapped Ions
+
 5. How an Ion Becomes a Qubit
 
      •	Choosing levels for |0⟩ and |1⟩.

@@ -133,9 +133,14 @@ Postulate 1 implies that the state of a quantum mechanical system, its quantum s
 <h2>Example: The Qubit</h2>
 
 <p>
-The simplest non-trivial quantum mechanical system is the qubit. A qubit has a two-dimensional state space namely, |0⟩ and |1⟩ which form an orthonormal basis. “Ortho” meaning orthogonal to each other and normal meaning normalized to 1. You show orthonormality using the inner product (exercise).
+The simplest non-trivial quantum mechanical system is the qubit. A qubit has a two-dimensional state space namely, |0⟩ and |1⟩ which form an orthonormal basis. “Ortho” meaning orthogonal to each other and normal meaning normalized to 1. You show orthonormality using the inner product.
 </p>
 
+<button class="collapsible">Exercise 1.1</button>
+<div class="content-box">
+Use the inner product to show orthonormality of |0⟩ and |1⟩.
+</div>
+    
 <p>
 The state vector of a qubit is commonly written as:
 </p>
@@ -176,7 +181,7 @@ Again, the qubit is state is a linear combination. In general, any linear combin
 This state is a superposition with amplitudes of   and  , respectively and is a valid quantum state according to postulate 1.
 </p>
 
-<button class="collapsible">Exercise 1.1</button>
+<button class="collapsible">Exercise 1.2</button>
 <div class="content-box">
 Is the state [Insert Placeholder] a valid quantum state?  
 Check its normalization.
@@ -242,7 +247,7 @@ The Pauli matrices are operators which act on the quantum state spaces. The thre
 
 <p><span class="eq-placeholder">(1.26) [Insert Equation Here — X, Y, Z Matrices]</span></p>
 
-<button class="collapsible">Exercise 1.2</button>
+<button class="collapsible">Exercise 1.3</button>
 <div class="content-box">
 Confirm that each Pauli matrix is unitary by calculating U†U.
 </div>
@@ -330,7 +335,7 @@ So, we have:
 <!-- Figure Placeholder -->
 <p><i>[Figure Placeholder: Bloch Sphere Diagram]</i></p>
 
-<button class="collapsible">Exercise 1.3</button>
+<button class="collapsible">Exercise 1.4</button>
 <div class="content-box">
 Show that the Bloch sphere parameterization automatically satisfies |α|² + |β|² = 1.
 </div>
@@ -411,7 +416,7 @@ Then,
 The combination produces a resultant state in quadrant III. For clarity, X first puts us in quadrant IV, then Z rotates about the z-axis placing essentially giving a symmetric mirroring about z to give quadrant III as the result.
 </p>
 
-<button class="collapsible">Exercise 1.4</button>
+<button class="collapsible">Exercise 1.5</button>
 <div class="content-box">
 Perform the same analysis above for the Y- and Z-gates and discuss the result on the general qubit.
 </div>
@@ -434,7 +439,7 @@ When a Hadamard gate acts on a single bit such as |0⟩ the following is the res
 So, the Hadamard gate creates superposition!
 </p>
 
-<button class="collapsible">Exercise 1.5</button>
+<button class="collapsible">Exercise 1.6</button>
 <div class="content-box">
 Show that the superposition above is a valid quantum state.  
 Hint: invoke Postulate 1 (normalization).
@@ -539,6 +544,12 @@ So, we now have two equations which dictate how states evolve in quantum mechani
 As an exercise, use the updated Postulate 2 and Schrodinger equation to show that:
 </p>
 
+<button class="collapsible">Exercise 1.7</button>
+<div class="content-box">
+Show that:
+<p><span class="eq-placeholder">(1.63) [Insert Equation Here — H|ψ(0)⟩ ∝ |ψ(0)⟩]</span></p>
+</div>
+    
 <p><span class="eq-placeholder">(1.63) [Insert Equation Here — H|ψ(0)⟩ ∝ |ψ(0)⟩]</span></p>
 
 <p>
@@ -564,7 +575,7 @@ Another way of writing this is:
 The |E⟩ are also known as stationary states of the system because they do not change with time.
 </p>
 
-<button class="collapsible">Exercise 1.6</button>
+<button class="collapsible">Exercise 1.8</button>
 <div class="content-box">
 Suppose a single qubit has a Hamiltonian H = ħωX.  
 What are the eigenvalues and eigenstates of this Hamiltonian?
@@ -666,7 +677,7 @@ The final states after measurement are:
 Given these measurement operators in the computational basis, show that the Completeness Relation is obeyed: Σₘ M†ₘMₘ = I.
 </p>
 
-<button class="collapsible">Exercise 1.8</button>
+<button class="collapsible">Exercise 1.9</button>
 <div class="content-box">
 Using the computational basis measurement operators  
 M₀ = |0⟩⟨0| and M₁ = |1⟩⟨1|,  
@@ -736,7 +747,7 @@ The measurement operators in the computational basis are M<sub>0</sub> = |0⟩�
 These results indicate we cannot distinguish states which are not orthonormal to each other using quantum measurements. You can verify that ⟨ψ<sub>1</sub>|ψ<sub>2</sub>⟩ ≠ 0.
 </p>
 
-<button class="collapsible">Exercise 1.8</button>
+<button class="collapsible">Exercise 1.10</button>
 <div class="content-box">
 Using the computational basis measurement operators  
 M₀ = |0⟩⟨0| and M₁ = |1⟩⟨1|,  
@@ -766,7 +777,7 @@ The spread of observed values upon measurement of M is represented by the standa
 Where the commutator [C, D] = CD − DC.
 </p>
 
-<button class="collapsible">Exercise 1.10</button>
+<button class="collapsible">Exercise 1.11</button>
 <div class="content-box">
 For an observable M with eigenvalues m₁ and m₂,  
 compute the expectation value ⟨M⟩ and the standard deviation ΔM  
@@ -798,10 +809,10 @@ Another type of phase is known as Relative Phase and has observable consequences
 <p><span class="eq-placeholder">(1.93) [Insert Equation Here — |ψ₊⟩ and |ψ₋⟩]</span></p>
 
 <p>
-We saw previously that orthogonal states have perfect distinguishability. As an exercise, show that these states are orthogonal. This indicates that relative phase between produces distinct observable outcomes upon measurement.
+We saw previously that orthogonal states have perfect distinguishability. In the next exercise, show that these states are orthogonal. This indicates that relative phase between produces distinct observable outcomes upon measurement.
 </p>
 
-<button class="collapsible">Exercise 1.7</button>
+<button class="collapsible">Exercise 1.12</button>
 <div class="content-box">
 Show explicitly that the two states  
 |ψ₊⟩ = (|0⟩ + |1⟩)/√2 and |ψ₋⟩ = (|0⟩ − |1⟩)/√2  
@@ -840,9 +851,14 @@ In our case:
 <p><span class="eq-placeholder">(1.97) [Insert Equation Here — M built from |ψ₊⟩, |ψ₋⟩]</span></p>
 
 <p>
-Conventionally, we choose λ = ±1. As an exercise, verify the Completeness Relation M.
+Conventionally, we choose λ = ±1. In the next exercise, verify the Completeness Relation M.
 </p>
 
+<button class="collapsible">Exercise 1.13</button>
+<div class="content-box">
+Verify the completion relation for equation 1.97.
+</div>
+    
 <p>
 Now, expanding:
 </p>
@@ -854,10 +870,10 @@ The result is the Pauli-X observable, so the basis is the Pauli-X basis with M±
 </p>
 
 <p>
-As an exercise show that in the Pauli-X basis the + and − states are now visually distinguishable using Postulate 3 to compute the probabilities.
+In the next exercise, show that in the Pauli-X basis the + and − states are now visually distinguishable using Postulate 3 to compute the probabilities.
 </p>
 
-<button class="collapsible">Exercise 1.13</button>
+<button class="collapsible">Exercise 1.14</button>
 <div class="content-box">
 Using the Pauli-X operator, compute the measurement probabilities
 for the states |ψ₊⟩ and |ψ₋⟩.  
@@ -918,7 +934,7 @@ Property 2: (v<sub>1</sub> + v<sub>2</sub>) ⊗ w = v<sub>1</sub> ⊗ w + v<sub>
 Property 3: v ⊗ (w<sub>1</sub> + w<sub>2</sub>) = v ⊗ w<sub>1</sub> + v ⊗ w<sub>2</sub>.
 </p>
 
-<button class="collapsible">Exercise 1.14</button>
+<button class="collapsible">Exercise 1.15</button>
 <div class="content-box">
 Using explicit vectors, verify Properties 2 and 3 of the tensor product
 by expanding both sides of each equation and showing they are equal.
@@ -996,7 +1012,7 @@ Operationally, the tensor product can be computed using the Kronecker Product fo
 
 <p><span class="eq-placeholder">(1.105) [Insert Equation Here — Kronecker product example]</span></p>
 
-<button class="collapsible">Exercise 1.15</button>
+<button class="collapsible">Exercise 1.16</button>
 <div class="content-box">
 Compute the tensor product |0⟩⊗|1⟩ and |1⟩⊗|0⟩ using the Kronecker
 product of column vectors.  

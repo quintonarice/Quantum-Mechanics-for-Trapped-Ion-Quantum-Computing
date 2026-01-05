@@ -7,15 +7,4 @@ body { margin:0; font-family:Georgia,serif; background:#f8f8f8; }
 .collapsible { background:#235784; color:white; cursor:pointer; padding:10px; border:none; text-align:left; margin-top:10px; width:100%; }
 .active, .collapsible:hover { background:#1d466a; }
 .content-box { padding:0 15px; display:none; background:white; border-left:3px solid #235784; }
-/* ===== Layout fix: prevent content from sitting under sidebar ===== */
-
-.sidebar {
-  width: 220px;
-}
-
-.content {
-  margin-left: 240px;   /* sidebar width + breathing room */
-  padding: 2rem;
-  box-sizing: border-box;
-}
 

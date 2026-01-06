@@ -12,21 +12,16 @@
 
 <body>
 
-<div class="sidebar">
-  <h2>Navigation</h2>
+<div id="sidebar-container"></div>
 
-  <a href="index.html">Home</a>
-  <a href="introduction.html">Introduction</a>
+<script>
+fetch("/Quantum-Mechanics-for-Trapped-Ion-Quantum-Computing/includes/sidebar.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("sidebar-container").innerHTML = html;
+  });
+</script>
 
-  <button class="nav-collapsible">Postulates</button>
-  <div class="nav-content">
-    <a href="/chapters/ch01_postulates.html">Postulates of Quantum Mechanics </a>
-    <a href="/chapters/ch01_postulate1.html">Postulate 1</a>
-    <a href="/chapters/ch01_postulate2.html">Postulate 2</a>
-    <a href="/chapters/ch01_postulate3.html">Postulate 3</a>
-    <a href="/chapters/ch01_postulate4.html">Postulate 4</a>
-  </div>
-</div>
 
 <div class="content">
 

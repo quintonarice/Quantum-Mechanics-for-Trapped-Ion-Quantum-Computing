@@ -8,26 +8,3 @@ body { margin:0; font-family:Georgia,serif; background:#f8f8f8; }
 .active, .collapsible:hover { background:#1d466a; }
 .content-box { padding:0 15px; display:none; background:white; border-left:3px solid #235784; }
 
-
-.nav-collapsible {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: left;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  width: 100%;
-}
-
-.nav-content {
-  display: none;
-  padding-left: 1rem;
-}
-
-.nav-content a {
-  display: block;
-  padding: 0.25rem 0;
-  text-decoration: none;
-}
-

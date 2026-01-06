@@ -1,1 +1,727 @@
 
+
+
+
+<h2>Postulate 2 of Quantum Mechanics</h2>
+
+<p>
+The evolution of a closed quantum system is described by a unitary transformation.
+</p>
+
+<p>
+\[
+|\psi'\rangle = U|\psi\rangle
+\tag{1.20}
+\]
+</p>
+
+<p>
+Where |ψ⟩ is the initial state, U is a unitary operator, and |ψ′⟩ is the final state. Note that this postulate explicitly describes closed systems, which do not interact with any external environment. Technically, there are no true closed systems in nature (unless you count the entire universe itself which may also not be closed), however, unitary operators can describe real-world quantum system dynamics.
+</p>
+
+<p>
+An operator is unitary if:
+</p>
+
+<p>
+\[
+U^\dagger U = I
+\tag{1.21}
+\]
+</p>
+
+<p>
+Where † (pronounced dagger) indicates the conjugate-transpose from earlier and I is the identity matrix:
+</p>
+
+<p>
+\[
+I =
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+\tag{1.22}
+\]
+</p>
+
+<p>
+So that if:
+</p>
+
+<p>
+\[
+U =
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\tag{1.23}
+\]
+</p>
+
+<p>
+Then,
+</p>
+
+<p>
+\[
+U^\dagger =
+\begin{pmatrix}
+a^* & c^* \\
+b^* & d^*
+\end{pmatrix}
+\tag{1.24}
+\]
+</p>
+
+<p>
+Unitarity preserves norms in accordance with Postulate 1. For example, we cannot have an operator which acts on a quantum state such that its inner product with itself (after the operation) does not equal 1 for that violates Postulate 1.
+</p>
+
+<p>
+In general, the inner product of ⟨ϕ| and |ψ⟩ is:
+</p>
+
+<p>
+\[
+\langle \phi | \psi \rangle
+\tag{1.25}
+\]
+</p>
+
+<hr>
+
+<h2>Pauli Matrices</h2>
+
+<p>
+The Pauli matrices are operators which act on the quantum state spaces. The three Pauli matrices are commonly known as the X-gate, Y-gate, and Z-gate and can be represented as:
+</p>
+
+<p>
+\[
+X =
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix},
+\quad
+Y =
+\begin{pmatrix}
+0 & -i \\
+i & 0
+\end{pmatrix},
+\quad
+Z =
+\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}
+\tag{1.26}
+\]
+</p>
+
+
+<button class="collapsible">Exercise 1.3</button>
+<div class="content-box">
+Confirm that each Pauli matrix is unitary by calculating U†U.
+</div>
+
+<p>
+Next apply each matrix to the general qubit state:
+</p>
+
+<p>
+\[
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle
+\tag{1.27}
+\]
+</p>
+
+<p>
+The results are:
+</p>
+
+<p>
+\[
+X|\psi\rangle = \alpha|1\rangle + \beta|0\rangle
+\tag{1.28}
+\]
+</p>
+<p>
+\[
+Y|\psi\rangle = i\alpha|1\rangle - i\beta|0\rangle
+\tag{1.29}
+\]
+</p>
+<p>
+\[
+Z|\psi\rangle = \alpha|0\rangle - \beta|1\rangle
+\tag{1.30}
+\]
+</p>
+
+<p>
+Comparing the results to the initial qubit state we can see that the X-gate causes a bit flip, the Y-gate yields a bit flip and a phase flip, and the Z-gate does a phase flip only.
+</p>
+
+<p>
+In physics, visualizations are often helpful so we will provide a commonly used representation to show what a unitary operator such as a Pauli matrix does to a qubit.
+</p>
+
+<p>
+Recall that a qubit can be represented by α and β where α and β are complex numbers satisfying |α|² + |β|² = 1.
+</p>
+
+<p>
+First we write the complex amplitudes in polar form by drawing them in the complex plane. We can see that:
+</p>
+
+<p>
+\[
+\alpha = |\alpha| e^{i\phi_0}
+\tag{1.31}
+\]
+</p>
+
+<p>
+Conventionally, α = r₀e^{iϕ₀}.
+</p>
+
+<p>
+The same process can be done for β so that we have:
+</p>
+
+<p>
+\[
+\beta = |\beta| e^{i\phi_1}
+\tag{1.32}
+\]
+</p>
+
+<p>
+Now we have a relationship between α, β and their phases ϕ₀ and ϕ₁.
+</p>
+
+<p>
+To make the notation cleaner we use Euler’s identity:
+</p>
+
+<p>
+\[
+e^{i\theta} = \cos\theta + i\sin\theta
+\tag{1.33}
+\]
+</p>
+
+<p>
+Now we can write our qubit state as:
+</p>
+
+<p>
+\[
+|\psi\rangle =
+|\alpha|e^{i\phi_0}|0\rangle +
+|\beta|e^{i\phi_1}|1\rangle
+\tag{1.34}
+\]
+</p>
+
+<p>
+After factoring out a global phase we have:
+</p>
+
+<p>
+\[
+|\psi\rangle =
+e^{i\phi_0}
+\left(
+|\alpha||0\rangle +
+|\beta|e^{i(\phi_1-\phi_0)}|1\rangle
+\right)
+\tag{1.35}
+\]
+</p>
+
+
+<p>
+Now we make a slight notation change to match conventions:
+</p>
+
+<p>
+\[
+|\alpha| = \cos\frac{\theta}{2},
+\quad
+|\beta| = \sin\frac{\theta}{2},
+\quad
+\phi = \phi_1 - \phi_0
+\tag{1.36}
+\]
+</p>
+>
+
+<p>
+We will prove later that the global phase does not change anything upon measurement and therefore can be dropped.
+</p>
+
+<p>
+So, we have:
+</p>
+
+<p>
+\[
+|\psi\rangle =
+\cos\frac{\theta}{2}|0\rangle +
+e^{i\phi}\sin\frac{\theta}{2}|1\rangle
+\tag{1.37}
+\]
+</p>
+
+
+<!-- Figure Placeholder -->
+<p><i>[Figure Placeholder: Bloch Sphere Diagram]</i></p>
+
+<button class="collapsible">Exercise 1.4</button>
+<div class="content-box">
+Show that the Bloch sphere parameterization automatically satisfies |α|² + |β|² = 1.
+</div>
+
+<p>
+As an exercise, let us apply the X-gate to the general qubit equation with the knowledge that…
+</p>
+
+<p>
+\[
+X|\psi\rangle =
+\cos\frac{\theta}{2}|1\rangle +
+e^{i\phi}\sin\frac{\theta}{2}|0\rangle
+\tag{1.38}
+\]
+</p>
+
+
+<p>
+Re-ordering:
+</p>
+
+<p>
+\[
+X|\psi\rangle =
+e^{i\phi}\sin\frac{\theta}{2}|0\rangle +
+\cos\frac{\theta}{2}|1\rangle
+\tag{1.39}
+\]
+</p>
+
+
+<p>
+Now we are free to multiply by a global phase factor because nothing physically changes upon doing so. We choose −i for convenience.
+</p>
+
+<p>
+\[
+(-i)X|\psi\rangle =
+- i e^{i\phi}\sin\frac{\theta}{2}|0\rangle
+- i\cos\frac{\theta}{2}|1\rangle
+\tag{1.40}
+\]
+</p>
+
+
+<p>
+Now, we would like to express this in the canonical Bloch form (same form as the general qubit above).
+</p>
+
+<p>
+\[
+|\psi'\rangle =
+\cos\frac{\theta'}{2}|0\rangle +
+e^{i\phi'}\sin\frac{\theta'}{2}|1\rangle
+\tag{1.41}
+\]
+</p>
+
+
+<p>
+Comparing to these last two equations we can see that:
+</p>
+
+<p>
+\[
+\cos\frac{\theta'}{2} = \sin\frac{\theta}{2}
+\tag{1.42}
+\]
+</p>
+
+
+<p>
+We know that sine is shifted by π/2 from cosine leading to:
+</p>
+
+<p>
+\[
+\sin\frac{\theta}{2} = \cos\left(\frac{\pi}{2}-\frac{\theta}{2}\right)
+\tag{1.43}
+\]
+</p>
+
+
+<p>
+Therefore,
+</p>
+
+<p>
+\[
+\theta' = \pi - \theta
+\tag{1.44}
+\]
+</p>
+
+
+<p>
+We use this result to get a relation between φ and φ′.
+</p>
+
+<p>
+\[
+e^{i\phi'} = -ie^{i\phi}
+\tag{1.45}
+\]
+</p>
+
+
+<p>
+Again, sine is shifted by π/2 from cosine which gives:
+</p>
+
+<p>
+\[
+\phi' = \phi - \frac{\pi}{2}
+\tag{1.46}
+\]
+</p>
+
+
+<p>
+These angular relations confirm for an arbitrary qubit, the X-gate flips the state about the x-axis by 180°.
+</p>
+
+<h3>Example:</h3>
+
+<p>
+Given that |ψ⟩ is 45° from the z-axis in the y-z plane, apply the X-gate and determine which 2D quadrant |ψ′⟩ lies.
+</p>
+
+<p>
+\[
+|\psi\rangle =
+\cos\frac{\pi}{8}|0\rangle +
+\sin\frac{\pi}{8}|1\rangle
+\tag{1.47}
+\]
+</p>
+
+
+<p>
+Then,
+</p>
+
+<p>
+\[
+|\psi'\rangle = X|\psi\rangle
+\tag{1.48}
+\]
+</p>
+
+
+<p>
+The combination produces a resultant state in quadrant III. For clarity, X first puts us in quadrant IV, then Z rotates about the z-axis placing essentially giving a symmetric mirroring about z to give quadrant III as the result.
+</p>
+
+<button class="collapsible">Exercise 1.5</button>
+<div class="content-box">
+Perform the same analysis above for the Y- and Z-gates and discuss the result on the general qubit.
+</div>
+
+<h2>The Hadamard Gate</h2>
+
+<p>
+The Hadamard Gate is another commonly used unitary operator. It is expressed as:
+</p>
+
+<p>
+\[
+H = \frac{1}{\sqrt{2}}
+\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix}
+\tag{1.49}
+\]
+</p>
+
+
+<p>
+When a Hadamard gate acts on a single bit such as |0⟩ the following is the result:
+</p>
+
+<p>
+\[
+H|0\rangle =
+\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)
+\tag{1.50}
+\]
+</p>
+
+
+<p>
+So, the Hadamard gate creates superposition!
+</p>
+
+<button class="collapsible">Exercise 1.6</button>
+<div class="content-box">
+Show that the superposition above is a valid quantum state.  
+Hint: invoke Postulate 1 (normalization).
+</div>
+
+<p>
+To do this, invoke Postulate 1. Meaning, does ⟨ψ|ψ⟩ = 1?  
+Since |0⟩ and |1⟩ are orthonormal, then ⟨0|0⟩ = 1 and ⟨1|1⟩ = 1.
+</p>
+
+<p>
+\[
+\langle \psi | \psi \rangle
+=
+\frac{1}{2}
+\left(
+\langle 0|0\rangle
++
+\langle 1|1\rangle
+\right)
+= 1
+\tag{1.51}
+\]
+</p>
+
+<p>
+You can verify that the Hadamard operator is unitary so that H†H = I, therefore:
+</p>
+
+<p>
+\[
+H^\dagger H = I
+\tag{1.52}
+\]
+</p>
+
+
+<p>
+We say unitary operations preserve inner products.
+</p>
+
+<hr>
+
+<h2>Postulate 2′ of Quantum Mechanics</h2>
+
+<p>
+The time evolution of the state of a closed quantum system is described by the Schrodinger Equation:
+</p>
+
+<p>
+\[
+i\hbar \frac{\partial}{\partial t}|\psi(t)\rangle = H|\psi(t)\rangle
+\tag{1.53}
+\]
+</p>
+
+
+<p>
+Where H is the Hamiltonian (not the Hadamard gate; be careful!). The Hamiltonian is an operator which generates time evolution. This can be “derived” from Postulate 2 by including explicit time-dependence.
+</p>
+
+<p>
+\[
+|\psi(t)\rangle = U(t)|\psi(0)\rangle
+\tag{1.54}
+\]
+</p>
+
+
+<p>
+Where |ψ(t)⟩ is the quantum state vector at some time t, |ψ(0)⟩ is the quantum state vector at some initial time t = 0, and U(t) is a time-evolution operator that tells us how the initial state changes.  
+We require that:
+</p>
+
+<p>
+1. The state changes smoothly with t.<br>
+2. Evolving first by t₁ and then by t₂ should be the same as evolving by t₁ + t₂:
+</p>
+
+<p>
+\[
+U(t_1)U(t_2) = U(t_1+t_2)
+\tag{1.55}
+\]
+</p>
+
+
+<p>
+3. U(t) must be unitary to preserve the inner product.
+</p>
+
+<p>
+The only continuous, unitary operators that satisfy the composition rule (requirement #2) have exponential form:
+</p>
+
+<p>
+\[
+U(t) = e^{-iAt}
+\tag{1.56}
+\]
+</p>
+
+
+<p>
+Where A is a Hermitian operator. A Hermitian operator obeys the following:
+</p>
+
+<p>
+\[
+A^\dagger = A
+\tag{1.57}
+\]
+</p>
+
+
+<p>
+Why should A be Hermitian? Because U(t) must be unitary:
+</p>
+
+<p>
+\[
+U^\dagger U = I \;\Rightarrow\; A^\dagger = A
+\tag{1.58}
+\]
+</p>
+
+
+<p>
+Now we take the time derivative of U(t) to see what happens.
+</p>
+
+<p>
+\[
+\frac{dU(t)}{dt} = -iAU(t)
+\tag{1.59}
+\]
+</p>
+
+
+<p>
+Which is the general form of the Schrodinger equation with the implication that A = H/ħ.  
+Therefore, if we know H we know how the system evolves in time.
+The time-evolution unitary operator can then be written as:
+</p>
+
+<p>
+\[
+U(t) = e^{-iHt/\hbar}
+\tag{1.60}
+\]
+</p>
+
+
+<p>
+So, we now have two equations which dictate how states evolve in quantum mechanics:
+</p>
+
+<p>
+1. The Schrodinger Equation<br>
+<p>
+\[
+i\hbar \frac{\partial}{\partial t}|\psi(t)\rangle = H|\psi(t)\rangle
+\tag{1.61}
+\]
+</p>
+
+</p>
+
+<p>
+2. Updated Postulate 2<br>
+<p>
+\[
+|\psi(t)\rangle = U(t)|\psi(0)\rangle
+\tag{1.62}
+\]
+</p>
+
+</p>
+
+<p>
+In the next exercise, use the updated Postulate 2 and the Schrodinger equation to show that the:
+</p>
+    
+<p>
+\[
+H|\psi(0)\rangle \propto |\psi(0)\rangle
+\tag{1.63}
+\]
+</p>
+
+    
+<button class="collapsible">Exercise 1.7</button>
+<div class="content-box">
+Show that:
+<p>
+\[
+H|\psi(0)\rangle \propto |\psi(0)\rangle
+\tag{1.63}
+\]
+</p>
+</div>
+
+<p>
+The proportionality constant is commonly denoted E for reasons explained below. So, we have:
+</p>
+
+<p>
+\[
+H|\psi\rangle = E|\psi\rangle
+\tag{1.64}
+\]
+</p>
+
+
+<p>
+Where we have dropped the function of time notation for simplicity.  
+This gives a result known as the time-independent Schrodinger equation.  
+If an operator acts on a state vector and the state vector is returned multiplied by a constant, the state is called an eigenstate of the operator, and the constant is its eigenvalue.
+</p>
+
+<p>
+The Hermiticity of the Hamiltonian forces the eigenvalues to be real and therefore we can assign the measurable allowed energies of the system to the eigenvalues while the eigenstates are known more specifically as the energy eigenstates.  
+Another way of writing this is:
+</p>
+
+<p>
+\[
+H|E\rangle = E|E\rangle
+\tag{1.65}
+\]
+</p>
+
+
+<p>
+The |E⟩ are also known as stationary states of the system because they do not change with time.
+</p>
+
+<button class="collapsible">Exercise 1.8</button>
+<div class="content-box">
+Suppose a single qubit has a Hamiltonian H = ħωX.  
+What are the eigenvalues and eigenstates of this Hamiltonian?
+</div>
+
+<br><br>
+
+<hr>

@@ -84,7 +84,7 @@ Similarly, a complex vector space can be expressed as a column matrix, however, 
 
 <p>
 \[
-\psi =
+\|psi\rangle =
 \begin{pmatrix}
 \alpha \\
 \beta
@@ -135,7 +135,7 @@ w_y
 </p>
 
 <p>
-Another important feature is that the dot product of a vector with itself gives the length of the vector:
+Another important feature is that the dot product of a vector with itself gives the magnitude or length of the vector:
 </p>
 
 <p>
@@ -157,7 +157,7 @@ Or
 </p>
 
 <p>
-Understanding that the dot product for real vectors is computed using the transpose in addition to the length of the vector being the square root of its dot product with itself is valuable because the quantum state vector has the similar albeit more general properties. In fact, the “quantum dot product” is the generalized dot product known as the inner product. For example, the inner product of two quantum state vectors, and :
+Understanding that the dot product for real vectors is computed using the transpose in addition to the length of the vector being the square root of its dot product with itself is valuable because the quantum state vector has similar albeit more general properties. In fact, the “quantum dot product” is the generalized dot product known as the inner product. For example, the inner product of two quantum state vectors, $|\phi\rangle$ and $|\psi\rangle$:
 </p>
 
 <p>
@@ -168,11 +168,11 @@ Understanding that the dot product for real vectors is computed using the transp
 </p>
 
 <p>
-Where ⟨ϕ|, called “bra phi,” is the conjugate-transpose of ket phi, |ϕ⟩. The inner product is therefore also called a bra-ket.
+Where, $\langle \phi|$, pronounced “bra phi,” is the conjugate-transpose of ket phi, $|\phi\rangle$. The inner product is therefore also called a bra-ket.
 </p>
 
 <p>
-Now, for the bra-ket via matrix multiplication:
+Notice we are using the <b>conjugate-transpose</b> now as opposed to the transpose like we did for real vectors. The “bra” vector accomplishes both complex conjugation and transposition all in one notation and is required to ensure that the inner product is real and positive. Why should that matter? We already saw that Equation 1.8 gives the length of a real vector. Let us compare that result to quantum state vectors.
 </p>
 
 <p>
@@ -189,6 +189,9 @@ Now, for the bra-ket via matrix multiplication:
 \]
 </p>
 
+<p>
+Where * represents the complex conjugate
+</p>
 <p>
 So that:
 </p>

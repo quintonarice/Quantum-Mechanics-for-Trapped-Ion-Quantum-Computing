@@ -806,13 +806,32 @@ To do this, invoke Postulate 1. Meaning, does ⟨ψ|ψ⟩ = 1?
 Since |0⟩ and |1⟩ are orthonormal, then ⟨0|0⟩ = 1 and ⟨1|1⟩ = 1.
 </p>
 
-<p><span class="eq-placeholder">(1.51) [Insert Equation Here — normalization check for H|0⟩]</span></p>
+<p>
+\[
+\langle \psi | \psi \rangle
+=
+\frac{1}{2}
+\left(
+\langle 0|0\rangle
++
+\langle 1|1\rangle
+\right)
+= 1
+\tag{1.51}
+\]
+</p>
 
 <p>
 You can verify that the Hadamard operator is unitary so that H†H = I, therefore:
 </p>
 
-<p><span class="eq-placeholder">(1.52) [Insert Equation Here — unitarity check]</span></p>
+<p>
+\[
+H^\dagger H = I
+\tag{1.52}
+\]
+</p>
+
 
 <p>
 We say unitary operations preserve inner products.
@@ -826,13 +845,25 @@ We say unitary operations preserve inner products.
 The time evolution of the state of a closed quantum system is described by the Schrodinger Equation:
 </p>
 
-<p><span class="eq-placeholder">(1.53) [Insert Equation Here — iħ ∂|ψ(t)⟩/∂t = H|ψ(t)⟩]</span></p>
+<p>
+\[
+i\hbar \frac{\partial}{\partial t}|\psi(t)\rangle = H|\psi(t)\rangle
+\tag{1.53}
+\]
+</p>
+
 
 <p>
 Where H is the Hamiltonian (not the Hadamard gate; be careful!). The Hamiltonian is an operator which generates time evolution. This can be “derived” from Postulate 2 by including explicit time-dependence.
 </p>
 
-<p><span class="eq-placeholder">(1.54) [Insert Equation Here — |ψ(t)⟩ = U(t)|ψ(0)⟩]</span></p>
+<p>
+\[
+|\psi(t)\rangle = U(t)|\psi(0)\rangle
+\tag{1.54}
+\]
+</p>
+
 
 <p>
 Where |ψ(t)⟩ is the quantum state vector at some time t, |ψ(0)⟩ is the quantum state vector at some initial time t = 0, and U(t) is a time-evolution operator that tells us how the initial state changes.  
@@ -844,7 +875,13 @@ We require that:
 2. Evolving first by t₁ and then by t₂ should be the same as evolving by t₁ + t₂:
 </p>
 
-<p><span class="eq-placeholder">(1.55) [Insert Equation Here — U(t₁)U(t₂) = U(t₁+t₂)]</span></p>
+<p>
+\[
+U(t_1)U(t_2) = U(t_1+t_2)
+\tag{1.55}
+\]
+</p>
+
 
 <p>
 3. U(t) must be unitary to preserve the inner product.
@@ -854,25 +891,49 @@ We require that:
 The only continuous, unitary operators that satisfy the composition rule (requirement #2) have exponential form:
 </p>
 
-<p><span class="eq-placeholder">(1.56) [Insert Equation Here — U(t) = e^{-iAt} ]</span></p>
+<p>
+\[
+U(t) = e^{-iAt}
+\tag{1.56}
+\]
+</p>
+
 
 <p>
 Where A is a Hermitian operator. A Hermitian operator obeys the following:
 </p>
 
-<p><span class="eq-placeholder">(1.57) [Insert Equation Here — A† = A]</span></p>
+<p>
+\[
+A^\dagger = A
+\tag{1.57}
+\]
+</p>
+
 
 <p>
 Why should A be Hermitian? Because U(t) must be unitary:
 </p>
 
-<p><span class="eq-placeholder">(1.58) [Insert Equation Here — U†U = I → A† = A]</span></p>
+<p>
+\[
+U^\dagger U = I \;\Rightarrow\; A^\dagger = A
+\tag{1.58}
+\]
+</p>
+
 
 <p>
 Now we take the time derivative of U(t) to see what happens.
 </p>
 
-<p><span class="eq-placeholder">(1.59) [Insert Equation Here — dU/dt expression]</span></p>
+<p>
+\[
+\frac{dU(t)}{dt} = -iAU(t)
+\tag{1.59}
+\]
+</p>
+
 
 <p>
 Which is the general form of the Schrodinger equation with the implication that A = H/ħ.  
@@ -880,7 +941,13 @@ Therefore, if we know H we know how the system evolves in time.
 The time-evolution unitary operator can then be written as:
 </p>
 
-<p><span class="eq-placeholder">(1.60) [Insert Equation Here — U(t) = e^{-iHt/ħ}]</span></p>
+<p>
+\[
+U(t) = e^{-iHt/\hbar}
+\tag{1.60}
+\]
+</p>
+
 
 <p>
 So, we now have two equations which dictate how states evolve in quantum mechanics:
@@ -888,31 +955,60 @@ So, we now have two equations which dictate how states evolve in quantum mechani
 
 <p>
 1. The Schrodinger Equation<br>
-<span class="eq-placeholder">(1.61) [Insert Equation Here — SE]</span>
+<p>
+\[
+i\hbar \frac{\partial}{\partial t}|\psi(t)\rangle = H|\psi(t)\rangle
+\tag{1.61}
+\]
+</p>
+
 </p>
 
 <p>
 2. Updated Postulate 2<br>
-<span class="eq-placeholder">(1.62) [Insert Equation Here — |ψ(t)⟩ = U(t)|ψ(0)⟩]</span>
+<p>
+\[
+|\psi(t)\rangle = U(t)|\psi(0)\rangle
+\tag{1.62}
+\]
+</p>
+
 </p>
 
 <p>
 In the next exercise, use the updated Postulate 2 and the Schrodinger equation to show that the:
 </p>
     
-<p><span class="eq-placeholder">(1.63) [Insert Equation Here — H|ψ(0)⟩ ∝ |ψ(0)⟩]</span></p>
+<p>
+\[
+H|\psi(0)\rangle \propto |\psi(0)\rangle
+\tag{1.63}
+\]
+</p>
+
     
 <button class="collapsible">Exercise 1.7</button>
 <div class="content-box">
 Show that:
-<p><span class="eq-placeholder">(1.63) [Insert Equation Here — H|ψ(0)⟩ ∝ |ψ(0)⟩]</span></p>
+<p>
+\[
+H|\psi(0)\rangle \propto |\psi(0)\rangle
+\tag{1.63}
+\]
+</p>
 </div>
 
 <p>
 The proportionality constant is commonly denoted E for reasons explained below. So, we have:
 </p>
 
-<p><span class="eq-placeholder">(1.64) [Insert Equation Here — H|ψ⟩ = E|ψ⟩]</span></p>
+<p>
+\[
+H|\psi\rangle = E|\psi\rangle
+\tag{1.64}
+\]
+</p>
+
 
 <p>
 Where we have dropped the function of time notation for simplicity.  
@@ -925,7 +1021,13 @@ The Hermiticity of the Hamiltonian forces the eigenvalues to be real and therefo
 Another way of writing this is:
 </p>
 
-<p><span class="eq-placeholder">(1.65) [Insert Equation Here — H|E⟩ = E|E⟩]</span></p>
+<p>
+\[
+H|E\rangle = E|E\rangle
+\tag{1.65}
+\]
+</p>
+
 
 <p>
 The |E⟩ are also known as stationary states of the system because they do not change with time.
@@ -947,19 +1049,39 @@ What are the eigenvalues and eigenstates of this Hamiltonian?
 Quantum measurements are described by a collection of measurement operators {M<sub>m</sub>}. These act on the state space of the system being measured. The index m refers to the measurement outcomes that may occur. If the state of the system is |ψ⟩ immediately before the measurement then the probability that result m occurs is given by:
 </p>
 
-<p><span class="eq-placeholder">(1.66) [Insert Equation Here — p(m) = ⟨ψ|M†ₘMₘ|ψ⟩]</span></p>
+<p>
+\[
+p(m) = \langle \psi | M_m^\dagger M_m | \psi \rangle
+\tag{1.66}
+\]
+</p>
+
 
 <p>
 And the state after the measurement is given by:
 </p>
 
-<p><span class="eq-placeholder">(1.67) [Insert Equation Here — post-measurement state]</span></p>
+<p>
+\[
+|\psi'\rangle =
+\frac{M_m|\psi\rangle}
+{\sqrt{\langle \psi | M_m^\dagger M_m | \psi \rangle}}
+\tag{1.67}
+\]
+</p>
+
 
 <p>
 The measurement operators must satisfy the Completeness Relation:
 </p>
 
-<p><span class="eq-placeholder">(1.68) [Insert Equation Here — Σₘ M†ₘMₘ = I]</span></p>
+<p>
+\[
+\sum_m M_m^\dagger M_m = I
+\tag{1.68}
+\]
+</p>
+
 
 <p>
 Which guarantees the probabilities must sum to one. Until now nothing about quantum mechanics is inherently strange (with the possible exception being the concept of the state vector). Postulate 3 introduces probabilistic outcomes to the theory, departing from classical determinism.
@@ -969,43 +1091,100 @@ Which guarantees the probabilities must sum to one. Until now nothing about quan
 Let’s now explore the measurement operators M<sub>m</sub> in the computational basis. When a measurement operator acts on a qubit it returns an outcome according to Postulate 3. Two obvious outcomes would be either |0⟩ or |1⟩. Therefore,
 </p>
 
-<p><span class="eq-placeholder">(1.69) [Insert Equation Here — M₀|ψ⟩ and M₁|ψ⟩ action]</span></p>
+<p>
+\[
+M_0|\psi\rangle = |0\rangle\langle 0|\psi\rangle,
+\quad
+M_1|\psi\rangle = |1\rangle\langle 1|\psi\rangle
+\tag{1.69}
+\]
+</p>
+
 
 <p>
 Note this implicitly restricts us to projective measurements. Now we solve the following systems representing the two outcome:
 </p>
 
-<p><span class="eq-placeholder">(1.70) [Insert Equation Here — matrix equations for M₀]</span></p>
+<p>
+\[
+M_0
+\begin{pmatrix}
+\alpha \\
+\beta
+\end{pmatrix}
+=
+\begin{pmatrix}
+\alpha \\
+0
+\end{pmatrix}
+\tag{1.70}
+\]
+</p>
+
 
 <p>
 The result is:
 </p>
 
-<p><span class="eq-placeholder">(1.71) [Insert Equation Here — M₀ matrix]</span></p>
+<p>
+\[
+M_0 =
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\tag{1.71}
+\]
+</p>
+
 
 <p>
 Now we express this as a projector, meaning:
 </p>
 
-<p><span class="eq-placeholder">(1.72) [Insert Equation Here — projector decomposition]</span></p>
+<p>
+\[
+M_0 = |0\rangle\langle 0|
+\tag{1.72}
+\]
+</p>
+
 
 <p>
 Therefore, a = 1, c = 1, b = 0, and d = 0 so that:
 </p>
 
-<p><span class="eq-placeholder">(1.73) [Insert Equation Here — M₀ = |0⟩⟨0|]</span></p>
+<p>
+\[
+M_0 = |0\rangle\langle 0|
+\tag{1.73}
+\]
+</p>
+
 
 <p>
 The same process can be done for M<sub>1</sub> giving:
 </p>
 
-<p><span class="eq-placeholder">(1.74) [Insert Equation Here — M₁ = |1⟩⟨1|]</span></p>
+<p>
+\[
+M_1 = |1\rangle\langle 1|
+\tag{1.74}
+\]
+</p>
+
 
 <p>
 Now we check the probabilities from Postulate 3 using the computational measurement operators. The probability of obtaining outcome 0 is:
 </p>
 
-<p><span class="eq-placeholder">(1.75) [Insert Equation Here — p(0) derivation]</span></p>
+<p>
+\[
+p(0) = \langle \psi | M_0^\dagger M_0 | \psi \rangle
+\tag{1.75}
+\]
+</p>
+
 
 <p>
 After carefully distributing:

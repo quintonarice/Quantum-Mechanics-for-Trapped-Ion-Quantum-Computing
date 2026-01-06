@@ -8,6 +8,21 @@ body { margin:0; font-family:Georgia,serif; background:#f8f8f8; }
 .active, .collapsible:hover { background:#1d466a; }
 .content-box { padding:0 15px; display:none; background:white; border-left:3px solid #235784; }
 
+/* ===== Normalize section heading sizes ===== */
+
+.content h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.content h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+
 /* ===== Sidebar Accordion Navigation ===== */
 
 .sidebar {

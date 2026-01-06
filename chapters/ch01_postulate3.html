@@ -36,9 +36,20 @@
 fetch("/Quantum-Mechanics-for-Trapped-Ion-Quantum-Computing/includes/sidebar.html")
   .then(res => res.text())
   .then(html => {
-    document.getElementById("sidebar-container").innerHTML = html;
+    const container = document.getElementById("sidebar-container");
+    container.innerHTML = html;
+
+    // Restore sidebar state AFTER injection
+    container.querySelectorAll(".nav-section").forEach(section => {
+      const sectionId = section.dataset.section;
+      const isOpen = localStorage.getItem("nav-section-" + sectionId);
+      if (isOpen === "true") {
+        section.classList.add("open");
+      }
+    });
   });
 </script>
+
 
 
 

@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 1 — Postulates of Quantum Mechanics</title>
+
+<link rel="stylesheet" href="../css/style.css">
+  
+<script src="../js/collapsible.js"></script>
+  
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+  
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+.eq-placeholder {
+    font-style: italic;
+    color: #555;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="sidebar-container"></div>
+
+<script>
+fetch("/Quantum-Mechanics-for-Trapped-Ion-Quantum-Computing/includes/sidebar.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("sidebar-container").innerHTML = html;
+  });
+</script>
+
+
+
+<div class="content">
+
+
+<h2>Postulate 3 of Quantum Mechanics</h2>
+
+<p>
+Quantum measurements are described by a collection of measurement operators {M<sub>m</sub>}. These act on the state space of the system being measured. The index m refers to the measurement outcomes that may occur. If the state of the system is |ψ⟩ immediately before the measurement then the probability that result m occurs is given by:
+</p>
+
+<p>
+\[
+p(m) = \langle \psi | M_m^\dagger M_m | \psi \rangle
+\tag{1.66}
+\]
+</p>
+
+
+<p>
+And the state after the measurement is given by:
+</p>
+
+<p>
+\[
+|\psi'\rangle =
+\frac{M_m|\psi\rangle}
+{\sqrt{\langle \psi | M_m^\dagger M_m | \psi \rangle}}
+\tag{1.67}
+\]
+</p>
+
+
+<p>
+The measurement operators must satisfy the Completeness Relation:
+</p>
+
+<p>
+\[
+\sum_m M_m^\dagger M_m = I
+\tag{1.68}
+\]
+</p>
+
+
+<p>
+Which guarantees the probabilities must sum to one. Until now nothing about quantum mechanics is inherently strange (with the possible exception being the concept of the state vector). Postulate 3 introduces probabilistic outcomes to the theory, departing from classical determinism.
+</p>
+
+<p>
+Let’s now explore the measurement operators M<sub>m</sub> in the computational basis. When a measurement operator acts on a qubit it returns an outcome according to Postulate 3. Two obvious outcomes would be either |0⟩ or |1⟩. Therefore,
+</p>
+
+<p>
+\[
+M_0|\psi\rangle = |0\rangle\langle 0|\psi\rangle,
+\quad
+M_1|\psi\rangle = |1\rangle\langle 1|\psi\rangle
+\tag{1.69}
+\]
+</p>
+
+
+<p>
+Note this implicitly restricts us to projective measurements. Now we solve the following systems representing the two outcome:
+</p>
+
+<p>
+\[
+M_0
+\begin{pmatrix}
+\alpha \\
+\beta
+\end{pmatrix}
+=
+\begin{pmatrix}
+\alpha \\
+0
+\end{pmatrix}
+\tag{1.70}
+\]
+</p>
+
+
+<p>
+The result is:
+</p>
+
+<p>
+\[
+M_0 =
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\tag{1.71}
+\]
+</p>
+
+
+<p>
+Now we express this as a projector, meaning:
+</p>
+
+<p>
+\[
+M_0 = |0\rangle\langle 0|
+\tag{1.72}
+\]
+</p>
+
+
+<p>
+Therefore, a = 1, c = 1, b = 0, and d = 0 so that:
+</p>
+
+<p>
+\[
+M_0 = |0\rangle\langle 0|
+\tag{1.73}
+\]
+</p>
+
+
+<p>
+The same process can be done for M<sub>1</sub> giving:
+</p>
+
+<p>
+\[
+M_1 = |1\rangle\langle 1|
+\tag{1.74}
+\]
+</p>
+
+
+<p>
+Now we check the probabilities from Postulate 3 using the computational measurement operators. The probability of obtaining outcome 0 is:
+</p>
+
+<p>
+\[
+p(0) = \langle \psi | M_0^\dagger M_0 | \psi \rangle
+\tag{1.75}
+\]
+</p>
+
+
+<p>
+After carefully distributing:
+</p>
+
+<p>
+\[
+p(0) = |\alpha|^2
+\tag{1.76}
+\]
+</p>
+
+
+<p>
+Likewise,
+</p>
+
+<p>
+\[
+p(1) = |\beta|^2
+\tag{1.77}
+\]
+</p>
+
+
+<p>
+These are very important results! Postulate 3 dictates that the complex amplitudes are in fact probabilities! That is why earlier we referred to them as probability amplitudes. The squared modulus of the complex coefficients represents the measurement outcome probability.
+</p>
+
+<p>
+The final states after measurement are:
+</p>
+
+<p>
+\[
+|\psi'\rangle = |0\rangle
+\quad \text{or} \quad
+|\psi'\rangle = |1\rangle
+\tag{1.78}
+\]
+</p>
+
+
+<p>
+Given these measurement operators in the computational basis, show that the Completeness Relation is obeyed: Σₘ M†ₘMₘ = I.
+</p>
+
+<button class="collapsible">Exercise 1.9</button>
+<div class="content-box">
+Using the computational basis measurement operators  
+M₀ = |0⟩⟨0| and M₁ = |1⟩⟨1|,  
+verify explicitly that  
+M₀†M₀ + M₁†M₁ = I.
+</div>
+
+<p>
+An important theorem known as Spectral Decomposition states that any normal operator which acts on a vector space, V, is diagonal with respect to some orthonormal basis for V. A normal operator obeys MM† = M†M and thus Hermitian operators, M = M† are normal. The full derivation is shown in the appendix.
+</p>
+
+<p>
+In general, the spectral decomposition of a Hermitian operator is given by:
+</p>
+
+<p>
+\[
+M = \sum_i \lambda_i |a_i\rangle\langle a_i|
+\tag{1.79}
+\]
+</p>
+
+
+<p>
+Where λ<sub>i</sub> are the eigenvalues of M and |a<sub>i</sub>⟩⟨a<sub>i</sub>| are the projectors onto the eigenspace of M.
+</p>
+
+<p>
+The reference textbook by Nielsen and Chuang uses the following notation to represent the same expression:
+</p>
+
+<p>
+\[
+M = \sum_m m P_m
+\tag{1.80}
+\]
+</p>
+
+
+<p>
+In general, our set of measurement operators {M<sub>m</sub>} may not be projectors of this form, but when they are we call them projective measurement operators. Therefore, when M<sub>m</sub> = P<sub>m</sub> we have projective measurements.
+</p>
+
+<p>
+A projector has the following properties:
+</p>
+
+<p>
+\[
+P^\dagger = P
+\tag{1.81}
+\]
+</p>
+
+<p>
+\[
+P^2 = P
+\tag{1.82}
+\]
+</p>
+
+
+<p>
+That is projectors are Hermitian and idempotent. So, for projective measurements Postulate 3 becomes:
+</p>
+
+<p>
+\[
+p(m) = \langle \psi | P_m | \psi \rangle
+\tag{1.83}
+\]
+</p>
+
+
+<p>
+Which represents the probability of getting results, m, and is commonly provided as one of the first postulates in undergraduate quantum mechanics. Additionally, the post measurement state is:
+</p>
+
+<p>
+\[
+|\psi'\rangle =
+\frac{P_m|\psi\rangle}
+{\sqrt{\langle \psi | P_m | \psi \rangle}}
+\tag{1.84}
+\]
+</p>
+
+
+<h3>An Application of Postulate 3: Distinguishing Quantum States</h3>
+
+<p>
+Classically, distinct states of an object are usually distinguishable, however, for quantum states the story is not so straightforward. As an example, we are given the following states and are asked to distinguish them in the computational basis by measuring.
+</p>
+
+<p>
+\[
+|\psi_1\rangle = |0\rangle,
+\quad
+|\psi_2\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)
+\tag{1.85}
+\]
+</p>
+
+
+<p>
+The measurement operators in the computational basis are M<sub>0</sub> = |0⟩⟨0| and M<sub>1</sub> = |1⟩⟨1|. To distinguish the given states, we measure to see if the outcomes are different. The probability of getting outcome 0 is given by Postulate 3:
+</p>
+
+<p>
+\[
+p_1(0) = 1
+\tag{1.86}
+\]
+</p>
+
+<p>
+\[
+p_2(0) = \frac{1}{2}
+\tag{1.87}
+\]
+</p>
+
+
+<p>
+These results indicate we cannot distinguish states which are not orthonormal to each other using quantum measurements. You can verify that ⟨ψ<sub>1</sub>|ψ<sub>2</sub>⟩ ≠ 0.
+</p>
+
+<button class="collapsible">Exercise 1.10</button>
+<div class="content-box">
+Compute the inner product ⟨ψ₁|ψ₂⟩ for the two states given above.  
+Explain why a nonzero inner product prevents perfect distinguishability
+using quantum measurements.
+</div>
+
+<p>
+From probability theory, the average or expectation value of an outcome is given by:
+</p>
+
+<p>
+\[
+\langle M \rangle = \sum_m m\,p(m)
+\tag{1.88}
+\]
+</p>
+
+
+<p>
+Which leads to the familiar expression of the standard deviation:
+</p>
+
+<p>
+\[
+(\Delta M)^2 = \langle M^2 \rangle - \langle M \rangle^2
+\tag{1.89}
+\]
+</p>
+
+
+<p>
+The spread of observed values upon measurement of M is represented by the standard deviation. This in combination with the Cauchy-Schwarz inequality give rise to the Generalized Heisenberg Uncertainty Principle (derived in the Appendix) which states for two observables C and D:
+</p>
+
+<p>
+\[
+\Delta C\,\Delta D \ge \frac{1}{2}\left| \langle [C,D] \rangle \right|
+\tag{1.90}
+\]
+</p>
+
+
+<p>
+Where the commutator [C, D] = CD − DC.
+</p>
+
+<button class="collapsible">Exercise 1.11</button>
+<div class="content-box">
+For an observable M with eigenvalues m₁ and m₂,  
+compute the expectation value ⟨M⟩ and the standard deviation ΔM  
+for a general qubit state |ψ⟩ = α|0⟩ + β|1⟩.
+</div>
+
+<h3>Phase: Another Consequence of Postulate 3</h3>
+
+<p>
+We stated in previous sections that “we are free to multiply by a global phase factor because nothing physically changes upon doing so”. We will now prove this using Postulate 3. Consider the states |ψ⟩ and e<sup>iθ</sup>|ψ⟩. Now suppose M<sub>m</sub> is a measurement operator associated with a quantum measurement as before. According to Postulate 3:
+</p>
+
+<p>
+\[
+p(m) = \langle \psi | M_m^\dagger M_m | \psi \rangle
+\tag{1.91}
+\]
+</p>
+
+
+<p>
+And
+</p>
+
+<p>
+\[
+p(m) = \langle \psi | e^{-i\theta} M_m^\dagger M_m e^{i\theta} | \psi \rangle
+\tag{1.92}
+\]
+</p>
+
+
+<p>
+Because e<sup>−iθ</sup>e<sup>iθ</sup> = 1. So, from an observational standpoint these two states are identical. These are known as Global Phases and are irrelevant for the observed properties of the physical system.
+</p>
+
+<p>
+Another type of phase is known as Relative Phase and has observable consequences on quantum states. Consider the two orthogonal states which differ by a relative phase:
+</p>
+
+<p>
+\[
+|\psi_+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle),
+\quad
+|\psi_-\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
+\tag{1.93}
+\]
+</p>
+
+
+<p>
+We saw previously that orthogonal states have perfect distinguishability. In the next exercise, show that these states are orthogonal. This indicates that relative phase between produces distinct observable outcomes upon measurement.
+</p>
+
+<button class="collapsible">Exercise 1.12</button>
+<div class="content-box">
+Show explicitly that the two states  
+|ψ₊⟩ = (|0⟩ + |1⟩)/√2 and |ψ₋⟩ = (|0⟩ − |1⟩)/√2  
+are orthogonal by computing ⟨ψ₊|ψ₋⟩.
+</div>
+    
+<p>
+Orthogonality guarantees that quantum states are distinguishable in principle, but whether that distinguishability appears in a given experiment depends on the measurement basis. Relative phase is physically meaningful because it changes measurement statistics for some observables, whereas global phase never does.
+</p>
+
+<p>
+We can see this by attempting to use Postulate 3 in the computational basis:
+</p>
+
+<p>
+\[
+p_+(0) = \frac{1}{2}
+\tag{1.94}
+\]
+</p>
+
+<p>
+\[
+p_-(0) = \frac{1}{2}
+\tag{1.95}
+\]
+</p>
+
+
+<p>
+Likewise for p(1). So, because of the ½ probabilities for each state we can’t distinguish them in the computational basis, however, since they are orthogonal they must be distinguishable. Therefore, we must use a different basis to see the effect of relative phase on measurement outcomes.
+</p>
+
+<p>
+To choose the basis, we use spectral decomposition. Recall that:
+</p>
+
+<p>
+\[
+M = \sum_i \lambda_i |a_i\rangle\langle a_i|
+\tag{1.96}
+\]
+</p>
+
+
+<p>
+This works for any complete orthonormal basis of eigenvectors (which we have!).
+</p>
+
+<p>
+In our case:
+</p>
+
+<p>
+\[
+M = |\psi_+\rangle\langle \psi_+| - |\psi_-\rangle\langle \psi_-|
+\tag{1.97}
+\]
+</p>
+
+
+<p>
+Conventionally, we choose λ = ±1. In the next exercise, verify the Completeness Relation M.
+</p>
+
+<button class="collapsible">Exercise 1.13</button>
+<div class="content-box">
+Verify the completion relation for equation 1.97.
+</div>
+    
+<p>
+Now, expanding:
+</p>
+
+<p>
+\[
+M =
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+= X
+\tag{1.98}
+\]
+</p>
+
+
+<p>
+The result is the Pauli-X observable, so the basis is the Pauli-X basis with M± = |ψ±⟩⟨ψ±|.
+</p>
+
+<p>
+In the next exercise, show that in the Pauli-X basis the + and − states are now visually distinguishable using Postulate 3 to compute the probabilities.
+</p>
+
+<button class="collapsible">Exercise 1.14</button>
+<div class="content-box">
+Using the Pauli-X operator, compute the measurement probabilities
+for the states |ψ₊⟩ and |ψ₋⟩.  
+Show that the outcomes are now perfectly distinguishable.
+</div>
+
+<p>
+To recap:
+</p>
+
+<p>
+1.) We require orthogonal states for distinguishability. The “distinguishing” operator is built using the spectral theorem.
+</p>
+
+<p>
+2.) The relative phase between states gives rise to physically observable differences in measurement statistics. The visibility of relative phase is basis dependent.
+</p>

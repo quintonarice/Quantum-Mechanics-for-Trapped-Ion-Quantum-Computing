@@ -1190,13 +1190,25 @@ p(0) = \langle \psi | M_0^\dagger M_0 | \psi \rangle
 After carefully distributing:
 </p>
 
-<p><span class="eq-placeholder">(1.76) [Insert Equation Here — p(0) = |α|²]</span></p>
+<p>
+\[
+p(0) = |\alpha|^2
+\tag{1.76}
+\]
+</p>
+
 
 <p>
 Likewise,
 </p>
 
-<p><span class="eq-placeholder">(1.77) [Insert Equation Here — p(1) = |β|²]</span></p>
+<p>
+\[
+p(1) = |\beta|^2
+\tag{1.77}
+\]
+</p>
+
 
 <p>
 These are very important results! Postulate 3 dictates that the complex amplitudes are in fact probabilities! That is why earlier we referred to them as probability amplitudes. The squared modulus of the complex coefficients represents the measurement outcome probability.
@@ -1206,7 +1218,15 @@ These are very important results! Postulate 3 dictates that the complex amplitud
 The final states after measurement are:
 </p>
 
-<p><span class="eq-placeholder">(1.78) [Insert Equation Here — post-measurement states]</span></p>
+<p>
+\[
+|\psi'\rangle = |0\rangle
+\quad \text{or} \quad
+|\psi'\rangle = |1\rangle
+\tag{1.78}
+\]
+</p>
+
 
 <p>
 Given these measurement operators in the computational basis, show that the Completeness Relation is obeyed: Σₘ M†ₘMₘ = I.
@@ -1228,7 +1248,13 @@ An important theorem known as Spectral Decomposition states that any normal oper
 In general, the spectral decomposition of a Hermitian operator is given by:
 </p>
 
-<p><span class="eq-placeholder">(1.79) [Insert Equation Here — spectral decomposition]</span></p>
+<p>
+\[
+M = \sum_i \lambda_i |a_i\rangle\langle a_i|
+\tag{1.79}
+\]
+</p>
+
 
 <p>
 Where λ<sub>i</sub> are the eigenvalues of M and |a<sub>i</sub>⟩⟨a<sub>i</sub>| are the projectors onto the eigenspace of M.
@@ -1238,7 +1264,13 @@ Where λ<sub>i</sub> are the eigenvalues of M and |a<sub>i</sub>⟩⟨a<sub>i</s
 The reference textbook by Nielsen and Chuang uses the following notation to represent the same expression:
 </p>
 
-<p><span class="eq-placeholder">(1.80) [Insert Equation Here — N&C spectral form]</span></p>
+<p>
+\[
+M = \sum_m m P_m
+\tag{1.80}
+\]
+</p>
+
 
 <p>
 In general, our set of measurement operators {M<sub>m</sub>} may not be projectors of this form, but when they are we call them projective measurement operators. Therefore, when M<sub>m</sub> = P<sub>m</sub> we have projective measurements.
@@ -1248,20 +1280,46 @@ In general, our set of measurement operators {M<sub>m</sub>} may not be projecto
 A projector has the following properties:
 </p>
 
-<p><span class="eq-placeholder">(1.81) [Insert Equation Here — P† = P]</span></p>
-<p><span class="eq-placeholder">(1.82) [Insert Equation Here — P² = P]</span></p>
+<p>
+\[
+P^\dagger = P
+\tag{1.81}
+\]
+</p>
+
+<p>
+\[
+P^2 = P
+\tag{1.82}
+\]
+</p>
+
 
 <p>
 That is projectors are Hermitian and idempotent. So, for projective measurements Postulate 3 becomes:
 </p>
 
-<p><span class="eq-placeholder">(1.83) [Insert Equation Here — p(m) = ⟨ψ|Pₘ|ψ⟩]</span></p>
+<p>
+\[
+p(m) = \langle \psi | P_m | \psi \rangle
+\tag{1.83}
+\]
+</p>
+
 
 <p>
 Which represents the probability of getting results, m, and is commonly provided as one of the first postulates in undergraduate quantum mechanics. Additionally, the post measurement state is:
 </p>
 
-<p><span class="eq-placeholder">(1.84) [Insert Equation Here — post-measurement projection]</span></p>
+<p>
+\[
+|\psi'\rangle =
+\frac{P_m|\psi\rangle}
+{\sqrt{\langle \psi | P_m | \psi \rangle}}
+\tag{1.84}
+\]
+</p>
+
 
 <h3>An Application of Postulate 3: Distinguishing Quantum States</h3>
 
@@ -1269,14 +1327,34 @@ Which represents the probability of getting results, m, and is commonly provided
 Classically, distinct states of an object are usually distinguishable, however, for quantum states the story is not so straightforward. As an example, we are given the following states and are asked to distinguish them in the computational basis by measuring.
 </p>
 
-<p><span class="eq-placeholder">(1.85) [Insert Equation Here — two quantum states]</span></p>
+<p>
+\[
+|\psi_1\rangle = |0\rangle,
+\quad
+|\psi_2\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)
+\tag{1.85}
+\]
+</p>
+
 
 <p>
 The measurement operators in the computational basis are M<sub>0</sub> = |0⟩⟨0| and M<sub>1</sub> = |1⟩⟨1|. To distinguish the given states, we measure to see if the outcomes are different. The probability of getting outcome 0 is given by Postulate 3:
 </p>
 
-<p><span class="eq-placeholder">(1.86) [Insert Equation Here — p₁(0)]</span></p>
-<p><span class="eq-placeholder">(1.87) [Insert Equation Here — p₂(0)]</span></p>
+<p>
+\[
+p_1(0) = 1
+\tag{1.86}
+\]
+</p>
+
+<p>
+\[
+p_2(0) = \frac{1}{2}
+\tag{1.87}
+\]
+</p>
+
 
 <p>
 These results indicate we cannot distinguish states which are not orthonormal to each other using quantum measurements. You can verify that ⟨ψ<sub>1</sub>|ψ<sub>2</sub>⟩ ≠ 0.
@@ -1293,19 +1371,37 @@ using quantum measurements.
 From probability theory, the average or expectation value of an outcome is given by:
 </p>
 
-<p><span class="eq-placeholder">(1.88) [Insert Equation Here — expectation value]</span></p>
+<p>
+\[
+\langle M \rangle = \sum_m m\,p(m)
+\tag{1.88}
+\]
+</p>
+
 
 <p>
 Which leads to the familiar expression of the standard deviation:
 </p>
 
-<p><span class="eq-placeholder">(1.89) [Insert Equation Here — standard deviation]</span></p>
+<p>
+\[
+(\Delta M)^2 = \langle M^2 \rangle - \langle M \rangle^2
+\tag{1.89}
+\]
+</p>
+
 
 <p>
 The spread of observed values upon measurement of M is represented by the standard deviation. This in combination with the Cauchy-Schwarz inequality give rise to the Generalized Heisenberg Uncertainty Principle (derived in the Appendix) which states for two observables C and D:
 </p>
 
-<p><span class="eq-placeholder">(1.90) [Insert Equation Here — uncertainty principle]</span></p>
+<p>
+\[
+\Delta C\,\Delta D \ge \frac{1}{2}\left| \langle [C,D] \rangle \right|
+\tag{1.90}
+\]
+</p>
+
 
 <p>
 Where the commutator [C, D] = CD − DC.
@@ -1324,13 +1420,25 @@ for a general qubit state |ψ⟩ = α|0⟩ + β|1⟩.
 We stated in previous sections that “we are free to multiply by a global phase factor because nothing physically changes upon doing so”. We will now prove this using Postulate 3. Consider the states |ψ⟩ and e<sup>iθ</sup>|ψ⟩. Now suppose M<sub>m</sub> is a measurement operator associated with a quantum measurement as before. According to Postulate 3:
 </p>
 
-<p><span class="eq-placeholder">(1.91) [Insert Equation Here — p(m) for |ψ⟩]</span></p>
+<p>
+\[
+p(m) = \langle \psi | M_m^\dagger M_m | \psi \rangle
+\tag{1.91}
+\]
+</p>
+
 
 <p>
 And
 </p>
 
-<p><span class="eq-placeholder">(1.92) [Insert Equation Here — p(m) for e^{iθ}|ψ⟩]</span></p>
+<p>
+\[
+p(m) = \langle \psi | e^{-i\theta} M_m^\dagger M_m e^{i\theta} | \psi \rangle
+\tag{1.92}
+\]
+</p>
+
 
 <p>
 Because e<sup>−iθ</sup>e<sup>iθ</sup> = 1. So, from an observational standpoint these two states are identical. These are known as Global Phases and are irrelevant for the observed properties of the physical system.
@@ -1340,7 +1448,15 @@ Because e<sup>−iθ</sup>e<sup>iθ</sup> = 1. So, from an observational standpo
 Another type of phase is known as Relative Phase and has observable consequences on quantum states. Consider the two orthogonal states which differ by a relative phase:
 </p>
 
-<p><span class="eq-placeholder">(1.93) [Insert Equation Here — |ψ₊⟩ and |ψ₋⟩]</span></p>
+<p>
+\[
+|\psi_+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle),
+\quad
+|\psi_-\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
+\tag{1.93}
+\]
+</p>
+
 
 <p>
 We saw previously that orthogonal states have perfect distinguishability. In the next exercise, show that these states are orthogonal. This indicates that relative phase between produces distinct observable outcomes upon measurement.
@@ -1361,8 +1477,20 @@ Orthogonality guarantees that quantum states are distinguishable in principle, b
 We can see this by attempting to use Postulate 3 in the computational basis:
 </p>
 
-<p><span class="eq-placeholder">(1.94) [Insert Equation Here — p₊(0)]</span></p>
-<p><span class="eq-placeholder">(1.95) [Insert Equation Here — p₋(0)]</span></p>
+<p>
+\[
+p_+(0) = \frac{1}{2}
+\tag{1.94}
+\]
+</p>
+
+<p>
+\[
+p_-(0) = \frac{1}{2}
+\tag{1.95}
+\]
+</p>
+
 
 <p>
 Likewise for p(1). So, because of the ½ probabilities for each state we can’t distinguish them in the computational basis, however, since they are orthogonal they must be distinguishable. Therefore, we must use a different basis to see the effect of relative phase on measurement outcomes.
@@ -1372,7 +1500,13 @@ Likewise for p(1). So, because of the ½ probabilities for each state we can’t
 To choose the basis, we use spectral decomposition. Recall that:
 </p>
 
-<p><span class="eq-placeholder">(1.96) [Insert Equation Here — spectral decomposition reminder]</span></p>
+<p>
+\[
+M = \sum_i \lambda_i |a_i\rangle\langle a_i|
+\tag{1.96}
+\]
+</p>
+
 
 <p>
 This works for any complete orthonormal basis of eigenvectors (which we have!).
@@ -1382,7 +1516,13 @@ This works for any complete orthonormal basis of eigenvectors (which we have!).
 In our case:
 </p>
 
-<p><span class="eq-placeholder">(1.97) [Insert Equation Here — M built from |ψ₊⟩, |ψ₋⟩]</span></p>
+<p>
+\[
+M = |\psi_+\rangle\langle \psi_+| - |\psi_-\rangle\langle \psi_-|
+\tag{1.97}
+\]
+</p>
+
 
 <p>
 Conventionally, we choose λ = ±1. In the next exercise, verify the Completeness Relation M.
@@ -1397,7 +1537,18 @@ Verify the completion relation for equation 1.97.
 Now, expanding:
 </p>
 
-<p><span class="eq-placeholder">(1.98) [Insert Equation Here — expanded M]</span></p>
+<p>
+\[
+M =
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+= X
+\tag{1.98}
+\]
+</p>
+
 
 <p>
 The result is the Pauli-X observable, so the basis is the Pauli-X basis with M± = |ψ±⟩⟨ψ±|.
@@ -1434,7 +1585,13 @@ To recap:
 The state space of a composite physical system is the tensor product of the state space of the component physical systems. If we have systems numbered 1 through n and system i is prepared in the state |ψ<sub>i</sub>⟩, then the joint state of the total system is:
 </p>
 
-<p><span class="eq-placeholder">(1.99) [Insert Equation Here — tensor product state]</span></p>
+<p>
+\[
+|\Psi\rangle = |\psi_1\rangle \otimes |\psi_2\rangle \otimes \cdots \otimes |\psi_n\rangle
+\tag{1.99}
+\]
+</p>
+
 
 <p>
 Where ⊗ represents the tensor product. A tensor product is a vector space equipped with a bilinear map.
@@ -1490,13 +1647,25 @@ First, notice that if |v⟩|w⟩ is a valid quantum mechanical state, then z|v�
 Additionally, Hilbert spaces (where the state vectors live) are linear vector spaces in which composite states must respect scalar multiplication in each vector space independently.
 </p>
 
-<p><span class="eq-placeholder">(1.100) [Insert Equation Here — scalar multiplication property]</span></p>
+<p>
+\[
+z(|v\rangle \otimes |w\rangle) = (z|v\rangle)\otimes |w\rangle
+\tag{1.100}
+\]
+</p>
+
 
 <p>
 As well as:
 </p>
 
-<p><span class="eq-placeholder">(1.101) [Insert Equation Here — scalar on second space]</span></p>
+<p>
+\[
+z(|v\rangle \otimes |w\rangle) = |v\rangle \otimes (z|w\rangle)
+\tag{1.101}
+\]
+</p>
+
 
 <p>
 So, if we were to define |v⟩|w⟩ ≡ |v⟩ ⊗ |w⟩ it would readily obey Property 1 by default.
@@ -1506,13 +1675,25 @@ So, if we were to define |v⟩|w⟩ ≡ |v⟩ ⊗ |w⟩ it would readily obey Pr
 Now, let’s say that some states |v<sub>1</sub>⟩ and |v<sub>2</sub>⟩ are states of system A and are superposed such that:
 </p>
 
-<p><span class="eq-placeholder">(1.102) [Insert Equation Here — |v⟩ = |v₁⟩ + |v₂⟩]</span></p>
+<p>
+\[
+|v\rangle = |v_1\rangle + |v_2\rangle
+\tag{1.102}
+\]
+</p>
+
 
 <p>
 This is a valid state although it is unnormalized. The composite system would be:
 </p>
 
-<p><span class="eq-placeholder">(1.103) [Insert Equation Here — tensor with superposition]</span></p>
+<p>
+\[
+|v\rangle|w\rangle = |v_1\rangle|w\rangle + |v_2\rangle|w\rangle
+\tag{1.103}
+\]
+</p>
+
 
 <p>
 Which obeys Property 2 if |v⟩|w⟩ ≡ |v⟩ ⊗ |w⟩.
@@ -1530,7 +1711,14 @@ Let’s finalize this result. We could of course say that system B has superpose
 Thus, the composite is:
 </p>
 
-<p><span class="eq-placeholder">(1.104) [Insert Equation Here — full bilinearity]</span></p>
+<p>
+\[
+|v\rangle(|w_1\rangle + |w_2\rangle)
+= |v\rangle|w_1\rangle + |v\rangle|w_2\rangle
+\tag{1.104}
+\]
+</p>
+
 
 <p>
 Which is exactly Property 3 as long as |v⟩|w⟩ ≡ |v⟩ ⊗ |w⟩.
@@ -1544,7 +1732,28 @@ Since the object |v⟩|w⟩ obeys all the properties of a tensor product we say 
 Operationally, the tensor product can be computed using the Kronecker Product for matrices.
 </p>
 
-<p><span class="eq-placeholder">(1.105) [Insert Equation Here — Kronecker product example]</span></p>
+<p>
+\[
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}
+\otimes
+\begin{pmatrix}
+c \\
+d
+\end{pmatrix}
+=
+\begin{pmatrix}
+ac \\
+ad \\
+bc \\
+bd
+\end{pmatrix}
+\tag{1.105}
+\]
+</p>
+
 
 <button class="collapsible">Exercise 1.16</button>
 <div class="content-box">
@@ -1557,7 +1766,14 @@ Write each result as a 4-component column vector.
 Lastly, here is common notation concerning tensor products:
 </p>
 
-<p><span class="eq-placeholder">(1.106) [Insert Equation Here — |ψ⟩^{⊗k}]</span></p>
+<p>
+\[
+|\psi\rangle^{\otimes k}
+= \underbrace{|\psi\rangle \otimes \cdots \otimes |\psi\rangle}_{k\ \text{times}}
+\tag{1.106}
+\]
+</p>
+
 
 <p>
 Additionally, physicists commonly use the shorthand |vw⟩ = |v⟩⊗|w⟩ for more compact expression.

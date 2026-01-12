@@ -31,7 +31,7 @@ Part II: Quantum Computing with Trapped Ions
   
      •	Laser pulses as rotations.
   
-8. Two-Qubit Logic
+7. Two-Qubit Logic
    
      •	Shared vibrations between ions.
   
@@ -39,7 +39,7 @@ Part II: Quantum Computing with Trapped Ions
   
 Part III: The Bigger Picture
 
-10. Errors, Noise, and Why It Matters
+8. Errors, Noise, and Why It Matters
     
      •	Decoherence (quantum’s archnemesis)
   

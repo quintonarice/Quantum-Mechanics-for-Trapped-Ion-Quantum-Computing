@@ -31,11 +31,35 @@ fetch("/Quantum-Mechanics-for-Trapped-Ion-Quantum-Computing/includes/sidebar.htm
 
 <div class="content">
 
-<h1>Chapter 2: Trapped Ions and RF Confinement</h1>
+<h1>Trapped Ions</h1>
 
 <p>
-In this chapter we transition from the abstract postulates of quantum mechanics to the physical system that will ultimately serve as our quantum computer: trapped atomic ions. Before discussing internal atomic states, laser interactions, or quantum gates, we must first understand a more basic question:
+In this section we transition discuss the physical system that will ultimately serve as our quantum computer: trapped atomic ions.
+In 2000, D. P. DiVincenzo published, The physical implementation of quantum computation, in Fortschritte der Physik: Progress of Physics, 48, 771-783 which outlined five criteria for required for the realization of a quantum computer. 
 </p>
+
+<p> <b>DiVicenzo's Criteria:</b>
+</p>
+<p>
+(1) (a) Qubits must be well characterized and easy to produce. (b) the system must be
+scalable, i.e. must be able to manage an arbitrary number of qubits.
+</p>
+<p>
+(2) It must be possible to reliably initialize a qubit to a fiducial state, e.g. |0⟩;
+</p>
+<p>
+(3) A qubit must be stable over timescales larger than the typical time needed to operate
+on it. The lifespan of a qubit over which it can maintain its quantum information content (before noise starts to destroy it) is known as coherence time. For a viable QC
+system, the coherence time of the qubit must be greater than the computation time.
+</p>
+<p>
+(4) It must be possible to implement a universal set of quantum gates.
+</p>
+<p>
+(5) A reliable procedure must exist to read out the state of a qubit.
+</p>
+<p> While there are several candidates which can fulfill these criteria, we focus on atomic ions because in isolation,
+  atoms naturally satisfy DiVincenzo's criteria via internal atomic states, which are identical from atom to atom, 
 
 <p>
 <b>How can a charged particle be confined in space at all?</b>

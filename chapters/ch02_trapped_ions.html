@@ -34,7 +34,7 @@ fetch("/Physics-for-Trapped-Ion-Quantum-Computing/includes/sidebar.html")
 <h1>Trapped Ions</h1>
 
 <p>
-In this section we transition discuss the physical system that will ultimately serve as our quantum computer: trapped atomic ions.
+In this section we transition to discuss the physical system that will ultimately serve as the platform for our quantum computer: trapped atomic ions.
 In 2000, D. P. DiVincenzo published, The physical implementation of quantum computation, in Fortschritte der Physik: Progress of Physics, 48, 771-783 which outlined five criteria for required for the realization of a quantum computer. 
 </p>
 
@@ -58,8 +58,30 @@ system, the coherence time of the qubit must be greater than the computation tim
 <p>
 (5) A reliable procedure must exist to read out the state of a qubit.
 </p>
-<p> While there are several candidates which can fulfill these criteria, we focus on atomic ions because in isolation,
-  atoms naturally satisfy DiVincenzo's criteria via internal atomic states, which are identical from atom to atom, 
+<p>
+While several physical platforms can, in principle, fulfill DiVincenzo’s criteria, we focus on atomic ions because many of these requirements are naturally satisfied by isolated atomic systems.
+In particular, qubits encoded in internal atomic states are identical from ion to ion and do not rely on fabrication.
+Atomic ion energy levels are well understood through atomic structure theory and spectroscopy in addition to being <i>"easy"</i> to produce using standard photoionization techniques.
+By <i>"easy"</i> we mean in a predictable and reliable fashion.
+</p>
+<p>
+Atomic ions satisfy the scalability criteria because each ion is an independent, identical quantum system; adding another ion therefore adds another qubit.
+We will discuss <i>hardware scalability</i> in later sections as it is distinct from <i>system scalability</i>.
+</p>
+<p>
+Reliable initialization is accomplished through optical pumping which drives atomic transitions into single internal states
+via laser excitation with high fidelity. Stability is achieved with an ultra-high vacuuum environment which isolate ions from uncontrolled interactions and results in long coherence times on the order seconds while
+the time it takes to enact a computation occurs on the order of microseconds to milliseconds.
+</p>
+<p>  
+A universal set of quantum gates is implemented through controlled laser excitation of the ions.
+These gates are unitary operations and therefore possess the same mathematical properties discussed in Postulate 2 of quantum mechanics.
+Lastly, atomic ions use state-dependent fluorescence for measurement which acts as the read out of the qubit state.
+</p>
+
+<p>
+In the remainder of this chapter, we examine how trapped-ion hardware realizes these criteria in practice.
+</p>
 
 <p>
 <b>How can a charged particle be confined in space at all?</b>

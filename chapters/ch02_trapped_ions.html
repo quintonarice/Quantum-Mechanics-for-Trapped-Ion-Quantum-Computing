@@ -320,7 +320,7 @@ With a bit of algebra, it can be shown that:
 </p>
 <p>
 \[
-C(t) = \frac{V_x - V_y}{2r_0^2}
+C(t) = \frac{V_x(t) - V_y(t)}{2r_0^2}
 \tag{2.12}
 \]
 </p>
@@ -340,9 +340,36 @@ So in general, we have:
 </p>
 <p>
 \[
-\Phi(x,y,t) = \frac{V_x - V_y}{2r_0^2} (x^2 - y^2) + \frac{V_x(t) + V_y(t)}{2}
-\tag{2.12}
+\Phi(x,y,t) = \frac{V_x(t) - V_y(t)}{2r_0^2} (x^2 - y^2) + \frac{V_x(t) + V_y(t)}{2}
+\tag{2.14}
 \]
+</p>
+
+<p>
+Experimentally, it is common to choose $V_x(t)$ and $V_y(t)$ such that their average is $0$. This is referred to as the <b>common-mode RF</b>. Specifcally: $V_x(t) = \frac{\phi_0(t)}{2}$ and $V_y(t) = -\frac{\phi_0(t)}{2}$ where:
+</p>
+
+<p>
+\[
+\phi_0(t) = U + V_RF cos(\Omega t)
+\tag{2.15}
+\]
+</p>
+<p>
+Here, U is a DC offset parameter and $\Omega$ is the angular frequency.
+</p>
+  
+<p>
+Finally, after plugging in $V_x(t)$ and $V_y(t)$ into equation 2.14 we have the RF quadrupole potential for the linear Paul trap:
+</p>
+
+<p>
+\[
+\Phi(x,y,t) = \frac{\phi_0}{2r_0^2} (x^2 - y^2) 
+</p>
+  
+<p>
+This expression is commonly found in trapped-ion literature without explanation but now you understand its origin.
 </p>
   
 <hr>

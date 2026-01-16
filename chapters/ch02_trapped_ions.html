@@ -84,7 +84,7 @@ We will discuss <i>hardware scalability</i> in later sections as it is distinct 
 </p>
 <p>
 Reliable initialization is accomplished through optical pumping which drives atomic transitions into single internal states
-via laser excitation with high fidelity. Stability is achieved with an ultra-high vacuuum environment which isolate ions from uncontrolled interactions and results in long coherence times on the order seconds while
+via laser excitation with high fidelity. Stability is achieved with an ultra-high vacuum environment which isolate ions from uncontrolled interactions and results in long coherence times on the order seconds while
 the time it takes to enact a computation occurs on the order of microseconds to milliseconds.
 </p>
 <p>  
@@ -97,7 +97,7 @@ Lastly, atomic ions use state-dependent fluorescence for measurement which acts 
 While atomic ions satisfy the requirements for a physical implementation of a quantum computer, an immediate practical question remains:
 how can a device be constructed to exploit the quantum mechanical properties of atomic ions for computation?
 To begin, we must consider the following: Unlike neutral atoms, ions experience strong forces in electric fields and cannot simply be left free in vacuum.
-Therefore, confinement or trapping of a charged particle is critical for the physical aparatus based on atomic ions.
+Therefore, confinement or trapping of a charged particle is critical for the physical apparatus based on atomic ions.
 In the remainder of this chapter, we develop the physical principles underlying trapped-ion systems returning to DiVincenzo's criteria to come full circle.
 </p>
 
@@ -128,7 +128,7 @@ Since the electric field is minus the gradient of the electric potential, the po
 
 <p>
 \[
-\mathbf{E} = -\nabla\mathbf{V}
+\mathbf{E} = -\nabla {V}
 \tag{2.2}
 \]
 </p>
@@ -208,7 +208,7 @@ You can verify that a potential of this form satisfies Laplace's equation. This 
 </p>
 
 <p>
-The full deriviation involves multivariate Taylor expansion around the equilibrium position and is provided in the Appendix. Nonetheless, we provided some details to truly understand the machinery behind the scenes. After Taylor expansion around the center of the trap, we find that:
+The full derivation involves multivariate Taylor expansion around the equilibrium position and is provided in the Appendix. Nonetheless, we provided some details to truly understand the machinery behind the scenes. After Taylor expansion around the center of the trap, we find that:
 </p>
   
 <p>
@@ -219,7 +219,7 @@ The full deriviation involves multivariate Taylor expansion around the equilibri
 </p>
 
 <p>
-where $\frac{\partial^2}{\partial z^2} \Phi(0,0,0,t) z^2 = 0$ because the ideal RF quadrupole has no axial curvature. The axial confinement is provided by the separate static endcaps so that the second derivative $\frac{\partial^2}{\partial z^2} \Phi(0,0,0,t)$ is zero for the RF quadrupole contribution.
+where the $z^2$ term vanishes because the second derivative $\frac{\partial^2}{\partial z^2} \Phi(0,0,0,t)$ is zero. This is because the ideal RF quadrupole has no axial curvature. Meaning that the axial confinement is not a part of the RF quadrupole potential. It is provided separately by the static endcaps which we will account for later when we build the full potential.
 </p>
 <p>
 Now, applying this to Laplace's equation we get:
@@ -261,12 +261,12 @@ To clean up the notation even more, we call $\frac{1}{2} \frac{\partial^2}{\part
 <p>
 \[
 \Phi(x,y,t) \approx C(t)(x^2 - y^2) + \Phi_0(t)
-\tag{2.8}
+\tag{2.9}
 \]
 </p>
 
 <p>
-Now, earlier we stated that the 4 rods of the trap are cylindrical but this is mostly due the expense of manufacturing perfectly hyperbolic trap electrodes rather than a physical contraint. In the ideal Paul trap, the surfaces of the trap rods are hyperbolas of the form $x^2 - y^2$ so that the equipotentials in inside the trap are also hyperbolas. Because equipotentials have the same value along each line, the equation must be a constant along that line, (each line would be a different constant) so that $x^2 - y^2 = \mathit{const}$. But what is this constant? To determine it, we use the ideal geometry of the trap shown in Figure 2.2
+Now, earlier we stated that the 4 rods of the trap are cylindrical but this is mostly due the expense of manufacturing perfectly hyperbolic trap electrodes rather than a physical constraint. In the ideal Paul trap, the surfaces of the trap rods are hyperbolas of the form $x^2 - y^2$ so that the equipotentials in inside the trap are also hyperbolas. Because equipotentials have the same value along each line, the equation must be a constant along that line, (each line would be a different constant) so that $x^2 - y^2 = \mathit{const}$. But what is this constant? To determine it, we use the ideal geometry of the trap shown in Figure 2.2
 </p>
 <p>
 <figure>
@@ -280,7 +280,7 @@ The standard form of a hyperbola is:
 <p>
 \[
 \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
-\tag{2.9}
+\tag{2.10}
 \]
 </p>
   
@@ -290,7 +290,7 @@ In our case, $a = b = r_0$, known as the hyperbola parameter, so that $x^2 - y^2
 <p>
 \[
 x^2 - y^2 = \pm r_0^2
-\tag{2.10}
+\tag{2.11}
 \]
 </p>
 
@@ -304,7 +304,7 @@ Therefore, at the boudary of the rod we have:
 V_x(t) \\
 V_y(t)
 \end{cases}
-\tag{2.11}
+\tag{2.12}
 \]
 </p>
   
@@ -322,7 +322,7 @@ With a bit of algebra, it can be shown that:
 <p>
 \[
 C(t) = \frac{V_x(t) - V_y(t)}{2r_0^2}
-\tag{2.12}
+\tag{2.13}
 \]
 </p>
 
@@ -333,7 +333,7 @@ Now, what about $\Phi_0(t)$? With a little more algebra we can show that:
 <p>
 \[
 \Phi_0(t) = \frac{V_x(t) + V_y(t)}{2}
-\tag{2.13}
+\tag{2.14}
 \]
 </p>
 <p>
@@ -342,18 +342,18 @@ So in general, we have:
 <p>
 \[
 \Phi(x,y,t) = \frac{V_x(t) - V_y(t)}{2r_0^2} (x^2 - y^2) + \frac{V_x(t) + V_y(t)}{2}
-\tag{2.14}
+\tag{2.15}
 \]
 </p>
 
 <p>
-Experimentally, it is common to choose $V_x(t)$ and $V_y(t)$ such that their average is $0$. This is referred to as the <b>common-mode RF</b>. Specifcally: $V_x(t) = \frac{\phi_0(t)}{2}$ and $V_y(t) = -\frac{\phi_0(t)}{2}$ where:
+Experimentally, it is common to choose $V_x(t)$ and $V_y(t)$ such that their average is $0$. This is referred to as the <b>common-mode RF</b>. Specifically: $V_x(t) = \frac{\phi_0(t)}{2}$ and $V_y(t) = -\frac{\phi_0(t)}{2}$ where:
 </p>
 
 <p>
 \[
 \phi_0(t) = U + V_{RF} cos(\Omega t)
-\tag{2.15}
+\tag{2.16}
 \]
 </p>
   
@@ -362,7 +362,7 @@ Here, $U$ is a DC offset parameter, $V_{RF}$ is the radio frequency voltage ampl
 </p>
   
 <p>
-Finally, after plugging in $V_x(t)$ and $V_y(t)$ into equation 2.14 we have the RF quadrupole potential for the linear Paul trap:
+Finally, after plugging in $V_x(t)$ and $V_y(t)$ into equation 2.15 we have the RF quadrupole potential for the linear Paul trap:
 </p>
 
 <p>

@@ -187,7 +187,7 @@ The typical construction of a linear Paul trap is shown in Figure 2.1 and involv
 </figure>
   
 <p>
-Paul Traps, sometimes called RF traps, are a central technology used in modern trapped-ion quantum computers.
+Paul Traps, sometimes called RF traps, are a central technology used in modern trapped-ion quantum computers. Although linear Paul traps achieve axial confinement using static endcap electrodes, fully three-dimensional Paul traps exist in which all confinement is provided dynamically by RF fields. In practice, linear traps are preferred for quantum information applications due to their superior scalability and control.
 In the next section we will explore the solution to Laplace's equation under our dynamic constraint and how that informs the construction of a linear Paul trap.
 </p>
 
@@ -199,7 +199,7 @@ which is why it forms the basis of Paul traps. The quadrupole potential can be e
 
 <p>
 \[
-\Phi(x,y,z,t) \propto \x^2 - \y^2
+\Phi(x,y,z,t) \propto x^2 - y^2
 \tag{2.4}
 \]
 </p>
@@ -213,16 +213,107 @@ The full deriviation involves multivariate Taylor expansion around the equilibri
 
 <p>
 \[
-\Phi(x,y,z) \approx \Phi(0,0,0) + \frac{1}{2} \frac{\partial^2}{\partial x^2} \Phi(0,0,0,) x^2 + \frac{1}{2} \frac{\partial^2}{\partial y^2} \Phi(0,0,0,) y^2 + \frac{1}{2} \frac{\partial^2}{\partial z^2} \Phi(0,0,0,) z^2
+\Phi(x,y,z) \approx \Phi(0,0,0,0) + \frac{1}{2} \frac{\partial^2}{\partial x^2} \Phi(0,0,0,0) x^2 + \frac{1}{2} \frac{\partial^2}{\partial y^2} \Phi(0,0,0,0) y^2 + \frac{1}{2} \frac{\partial^2}{\partial z^2} \Phi(0,0,0,0) z^2
 \tag{2.5}
 \]
 </p>
 
 <p>
-where $\frac{1}{2} \frac{\partial^2}{\partial z^2} \Phi(0,0,0,) z^2 = 0$
+where $\frac{\partial^2}{\partial z^2} \Phi(0,0,0,0) z^2 = 0$ due to the neglible axial curvature.
+</p>
+<p>
+Now, Laplace says:
+</p>
   
+<p>
+\[
+\frac{\partial^2}{\partial x^2} \Phi(0,0,0,0) = -\frac{\partial^2}{\partial y^2} \Phi(0,0,0,0)
+\tag{2.6}
+\]
 </p>
+
+<p>
+So that:
 </p>
+
+<p>
+\[
+\Phi(x,y,z,t) \approx \Phi(0,0,0,0) + \frac{1}{2} \frac{\partial^2}{\partial x^2} \Phi(0,0,0,0) x^2 - \frac{1}{2} \frac{\partial^2}{\partial x^2} \Phi(0,0,0,0) y^2
+\tag{2.7}
+\]
+</p>
+  
+<p>
+where we have plugged equation 2.6 into equation 2.5. If we now call $\Phi(0,0,0,0) = \Phi_0$, we have:
+</p>
+
+<p>
+\[
+\Phi(x,y,z,t) \approx \Phi_0 + \frac{1}{2} \frac{\partial^2}{\partial x^2} \Phi(0,0,0,0) (x^2 - y^2)
+\tag{2.8}
+\]
+</p>
+<p>
+To clean up the notation even more, we call $\frac{1}{2} \frac{\partial^2}{\partial x^2} \Phi(0,0,0,0) \Rightarrow C(t)$ so that:
+</p>
+<p>
+\[
+\Phi(x,y,t) \approx C(t)(x^2 - y^2) + \Phi_0(t)
+\tag{2.8}
+\]
+</p>
+<p>
+Where we have dropped the explicit $z$ dependence since it does not affect the radial confinement.
+</p>
+<p>
+Now, earlier we stated that the 4 rods of the trap are cylindrical but this is mostly due the expense of manufacturing perfectly hyperbolic trap electrodes rather than a physical contraint. In the ideal Paul trap, the surfaces of the trap rods are hyperbolas of the form $x^2 - y^2$ so that the equipotentials in inside the trap are also hyperbolas. Because equipotentials have the same value along each line, the equation must be a constant along that line, (each line would be a different constant) so that $x^2 - y^2 = <i>const</i>. But what is this constant? To determine it, we use the ideal geometry of the trap shown in Figure 2.2
+</p>
+<p>
+<figure>
+  <p><i>[Figure 2.2 Placeholder: Quadrupole electrode geometry]</i></p>
+</figure>
+</p>
+
+<p>
+The standard form of a hyperbola is:
+</p>
+<p>
+\[
+\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+\tag{2.9}
+\]
+</p>
+<p>
+In our case, $a = b = r_0$, known as the hyperbola parameter, so that $x^2 - y^2 = r_0^2. Then for all 4 rods we generally write:
+</p>
+<p>
+\[
+\x^2 - y^2 = \pm r_0^2
+\tag{2.10}
+\]
+</p>
+
+<p>
+Therefore, at the boudary of the rod we have:
+</p>
+  
+<p>
+\[
+\Phi(x,y,t) \approx \pm C(t)r_0^2 + \Phi_0(t) \Rightarrow \[ \begin{cases}
+V_x(t) \\
+V_y(t)
+\end{cases}
+\]
+\tag{2.11}
+\]
+</p>
+  
+<p>
+where $V_x(t)$ and $V_y(t)$ are the rod potentials along the $x$ and $y$ axes, respectively.
+</p>
+
+
+
 
   
 <hr>

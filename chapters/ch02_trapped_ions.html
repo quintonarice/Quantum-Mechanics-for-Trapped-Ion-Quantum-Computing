@@ -581,14 +581,14 @@ x(t) = A cos(\omega_{sec} t) [1 + \frac{q}{2} cos(\Omega t)]
 \]
 </p>
 <p>
-where $A$ is the amplitude, $\omega_sec = \frac{q \Omega}{2 \sqrt{2}}$ is the <b>secular frequency</b> and $\Omega$ is the driving frequency. The secular frequency is responsible for the slow, overarching oscillatory motion of the ion while the driving frequency causes higher frequency oscillation known as <b>micromotion</b>. Experimentally, the driving frequency, also known as the RF drive or RF frequency (yes, sort of like saying ATM machine) can typically be from 10 - 100 MHz while the secular frequency is much smaller from around several hundred kHz to a few MHz. In trapped-ion experiments, laser cooling techniques are used to reduce the energy associated with the secular motion, since this motion corresponds to true bound oscillations of the ion in the trap. Micromotion, by contrast, is phase-locked to the RF drive and cannot be eliminated by cooling alone. While intrinsic micromotion is an unavoidable feature of RF trapping, excess micromotion arising from stray electric fields or imperfect alignment can be minimized through careful experimental compensation. Achieving low secular motion and minimal excess micromotion is essential for high-fidelity quantum control.
+where $A$ is the amplitude, $\omega_{sec} = \frac{q \Omega}{2 \sqrt{2}}$ is the <b>secular frequency</b> and $\Omega$ is the driving frequency. The secular frequency is responsible for the slow, overarching oscillatory motion of the ion while the driving frequency causes higher frequency oscillation known as <b>micromotion</b>. Experimentally, the driving frequency, also known as the RF drive or RF frequency (yes, sort of like saying ATM machine) can typically be from 10 - 100 MHz while the secular frequency is much smaller from around several hundred kHz to a few MHz. In trapped-ion experiments, laser cooling techniques are used to reduce the energy associated with the secular motion, since this motion corresponds to true bound oscillations of the ion in the trap. Micromotion, by contrast, is phase-locked to the RF drive and cannot be eliminated by cooling alone. While intrinsic micromotion is an unavoidable feature of RF trapping, excess micromotion arising from stray electric fields or imperfect alignment can be minimized through careful experimental compensation. Achieving low secular motion and minimal excess micromotion is essential for high-fidelity quantum control.
 </p>
 
 <p>
-Note: A similar analysis leading to equation 2.37 can be done for the $y$ equation but as we shall see, we can extend the argument to $y$ without loss of generality at the end of the derivation.
+Note: A similar analysis leading to equation 2.37 can be done for the $y$ equation but as we shall see, we can extend the argument in 2D without loss of generality at the end of the derivation.
 </p>
 <p>
-<b>The Psuedopotential</b>
+<b>The Pseudopotential</b>
 </p>
 <p>
 As we have shown in the sections above, the electric potential in a Paul trap is explicitly time-dependent, the resulting motion of a trapped ion naturally separates into fast micromotion and slow secular motion. When the RF drive frequency is much larger than the secular frequency, the rapid oscillations can be averaged over, yielding an effective time-independent potential that governs the secular dynamics. This effective potential is known as the <b>pseudopotential</b>. While it does not describe the full instantaneous motion of the ion, the pseudopotential provides a powerful and intuitive description of confinement, allowing the secular motion to be treated as that of a particle in a static harmonic trap. In the following section, we derive this effective potential and examine the conditions under which it is valid.
@@ -605,7 +605,7 @@ We determined earlier that the equation of motion in the $x$ direction given by 
 </p>
   
 <p>
-We can split he solution into the secular and micromotion:
+We can split he solution into secular and micromotion:
 </p>
   
 <p>
@@ -615,9 +615,54 @@ x(t) = \underbrace{X(t)}_\textrm{secular} + \underbrace{\xi(t)}_\textrm{micromot
 \]
 </p>
 
+<p>
+So that:
+</p>
+<p>
+\[
+\ddot X + \ddot \xi = -\frac{Q V_{RF}}{m r_0^2}(X + \xi) cos(\Omega t)
+\tag{2.40}
+\]
+</p>
+<p>
+Rearranging:
+</p>
+<p>
+\[
+\ddot \xi = -\frac{Q V_{RF}}{m r_0^2}[ X cos(\Omega t) - \xi cos(\Omega t) ] - \ddot X
+\tag{2.41}
+\]
+</p>
 
+<p>
+To simplify this, consider the micromotion of the form:
+</p>
 
+<p>
+\[
+\xi = A(t) cos(\Omega t)
+\tag{2.42}
+\]
+</p>
+<p>
+where A(t) is the time-varying amplitude on the secular timescale. The second derivative yields:
+</p>
 
+<p>
+\[
+\ddot \xi = A(t) \Omega^2 cos(\Omega t) + terms involving \dot A, \ddot A
+\tag{2.43}
+\]
+</p>
+<p>
+The extra terms involve $\dot A$ and $\ddot A$ can be dropped because $\dot A \sim \omega_{sec} A$ and $\ddot A \sim \omega_{sec}^2 A$ are suppressed by the fact that $\omega_{sec} \ll \Omega$. Therefore, to leading order:
+</p>
+<p>
+\[
+\ddot \xi \sim -\Omega^2 \xi
+\tag{2.44}
+\]
+</p>
 
 
 

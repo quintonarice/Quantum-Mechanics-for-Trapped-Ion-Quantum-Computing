@@ -447,7 +447,7 @@ Now plugging in $\phi_0(t)$ from equation 2.16:
 </p>
 
 <p>
-We now introduce a new parameter called $\tau$ which is standard practice to match our equations of motion the <i>Mathieu Equations</i> which were originally derived for something else entirely and might be worth a read outside of this context.
+We now introduce a new parameter called $\tau$ which is standard practice to match our equations of motion to the <i>Mathieu Equations</i> which were originally derived for something else entirely and might be worth a read outside of this context.
 </p>
 <p>
 We define:
@@ -568,6 +568,22 @@ We now make the standard approximation for the motion of the ion, meaning we app
 </figure>
 </p>
 
+<p>
+The Mathieu equations are a class of linear differential equations with periodic coefficients. The general solutions to these equations are obtained using <b>Floquet’s theorem</b>, which guarantees solutions of the form of a periodic function multiplied by an exponential. Physically, this analysis explains how a rapidly oscillating field can produce stable, time-averaged confinement. We do not pursue this analysis here; a brief overview of Floquet theory and its application to the Mathieu equation is provided in the Appendix.
+</p>
+<p>
+After applying Floquet theory, the solution to the $x$ equation is found to be:
+</p>
+<p>
+\[
+x(t) = A cos(\omega_sec t) [1 + \frac{q}{2} cos(\Omega t)]
+\tag{2.36}
+\]
+</p>
+<p>
+where $\omega_sec = \frac{qOmega}{2 \sqrt{2}}$ is the <b>secular frequency</b> and $\Omega$ is the driving frequency. The secular frequency is responsible for the slow, overarching oscillatory motion of the ion while the driving frequency causes higher frequency oscillation known a <b>micromotion</b>.
+</p>
+  
 <hr>
 
 <h2>2.5 Equations of Motion</h2>

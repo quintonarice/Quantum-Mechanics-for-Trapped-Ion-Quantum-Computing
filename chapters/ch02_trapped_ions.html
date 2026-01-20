@@ -620,7 +620,7 @@ So that:
 </p>
 <p>
 \[
-\ddot X + \ddot \xi = -\frac{Q V_{RF}}{m r_0^2}(X + \xi) cos(\Omega t)
+\ddot X + \ddot \xi = -\frac{Q V_{RF}}{m r_0^2}(X(t) + \xi(t)) cos(\Omega t)
 \tag{2.40}
 \]
 </p>
@@ -629,7 +629,7 @@ Rearranging:
 </p>
 <p>
 \[
-\ddot \xi = -\frac{Q V_{RF}}{m r_0^2}[ X cos(\Omega t) - \xi cos(\Omega t) ] - \ddot X
+\ddot \xi = -\frac{Q V_{RF}}{m r_0^2}[ X(t) cos(\Omega t) - \xi(t) cos(\Omega t) ] - \ddot X
 \tag{2.41}
 \]
 </p>
@@ -677,27 +677,27 @@ Therefore in equation 2.41 we have:
 </p>
 <p>
 \[
-\ddot \xi = -\frac{Q V_{RF}}{m r_0^2}[ X cos(\Omega t) - \xi cos(\Omega t) ]
+\ddot \xi = -\frac{Q V_{RF}}{m r_0^2}[ X(t) cos(\Omega t) - \xi(t) cos(\Omega t) ]
 \tag{2.46}
 \]
 </p>
 
 <p>
-Now we eliminate the $\xi cos(\Omega t)$ term by considering the ratio with $\ddot \xi$ using equation equation 2.44:
+Now we eliminate the $\xi(t) cos(\Omega t)$ term by considering the ratio with $\ddot \xi$ using equation equation 2.44:
 </p>
   
 <p>
 \[
-\frac{\xi}{\ddot \xi} = \frac{\xi}{\Omega^2 \xi} = \frac{1}{\Omega^2}
+\frac{\xi(t)}{\ddot \xi} = \frac{\xi(t)}{\Omega^2 \xi(t)} = \frac{1}{\Omega^2}
 \tag{2.47}
 \]
 </p> 
 <p>
-Meaning that $\xi \ll \ddot \xi$ and therefore can be dropped. Finally, we have:
+Meaning that $\xi(t) \ll \ddot \xi$ and therefore can be dropped. Finally, we have:
 </p>
 <p>
 \[
-\ddot \xi = -\frac{Q V_{RF}}{m r_0^2} X cos(\Omega t)
+\ddot \xi = -\frac{Q V_{RF}}{m r_0^2} X(t) cos(\Omega t)
 \tag{2.48}
 \]
 </p> 
@@ -708,12 +708,13 @@ Setting equation 2.48 equal to equation 2.43 lets us solve for $A(t)$:
 
 <p>
 \[
-\ddot \xi = -\frac{Q V_{RF}}{m r_0^2} X cos(\Omega t) = A(t) \Omega^2 cos(\Omega t)
+\ddot \xi = -\frac{Q V_{RF}}{m r_0^2} X(t) cos(\Omega t) = A(t) \Omega^2 cos(\Omega t)
 \]
 </p>
+
 <p>
 \[
-A(t) = -\frac{Q V_{RF}}{m r_0^2 \Omega^2} X
+\ A(t) = -\frac{Q V_{RF}}{m r_0^2 \Omega^2} X(t)
 \tag{2.49}
 \]
 </p> 
@@ -723,7 +724,7 @@ So finally, the mircomotion is governed by:
 </p>
 <p>
 \[
-\ \xi(t) = A(t) cos(\Omega t) = -\frac{Q V_{RF}}{m r_0^2 \Omega^2} X cos (\Omega t)
+\ \xi(t) = A(t) cos(\Omega t) = -\frac{Q V_{RF}}{m r_0^2 \Omega^2} X(t) cos (\Omega t)
 \tag{2.50}
 \]
 </p> 

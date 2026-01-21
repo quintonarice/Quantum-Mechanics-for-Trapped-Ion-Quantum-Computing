@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chapter 3 — Quantized Motion of Trapped Ions</title>
 
+<link rel="stylesheet" href="../css/style.css">
+
+<script src="../js/collapsible.js"></script>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+  
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+.eq-placeholder {
+  font-style: italic;
+  color: #555;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="sidebar-container"></div>
+
+<script>
+fetch("/Physics-for-Trapped-Ion-Quantum-Computing/includes/sidebar.html")
+  .then(res => res.text())
+  .then(html => {
+    const container = document.getElementById("sidebar-container");
+    container.innerHTML = html;
+  });
+</script>
+
+<div class="content">
+
+<div class="learning-objectives">
+  <h4>Learning Objectives</h4>
+  <ul>
+    <li> Explain why purely static electric fields cannot stably confine charged particles, and describe how time-dependent fields circumvent this limitation.</li>
+    <li> Describe the physical structure and operating principles of a linear Paul trap, including the distinct roles of RF and static electric fields.</li>
+    <li> Derive the quadrupole RF potential from Laplace’s equation and electrode boundary conditions, and relate trap geometry to field curvature.</li>
+    <li> Formulate and interpret the equations of motion for a trapped ion, including their reduction to the Mathieu equation and the physical meaning of the parameters $a$ and $q$.</li>
+    <li> Distinguish between secular motion and micromotion, identify their characteristic timescales, and explain how micromotion depends on displacement from the RF null.</li>
+    <li> Derive the pseudopotential approximation through time-scale separation and RF averaging, and justify which terms are retained or discarded using controlled approximations.</li>
+  </ul>
+</div> 
+  
+<h1>Quantized Motion of Trapped Ions</h1>
+
+<p>
+In this section we move from the classical description of the ion to the quantum mechanical description.
+</p>

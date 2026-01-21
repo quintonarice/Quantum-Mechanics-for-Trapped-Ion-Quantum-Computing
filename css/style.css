@@ -92,4 +92,32 @@ figcaption {
   color: #555;
 }
 
+.learning-objectives {
+  background-color: #eef4fb;          /* soft blue background */
+  border-left: 6px solid #2b6cb0;      /* deep blue accent */
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.learning-objectives h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #1e4f91;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.learning-objectives ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.learning-objectives li {
+  margin-bottom: 0.4rem;
+  line-height: 1.45;
+}
+
 

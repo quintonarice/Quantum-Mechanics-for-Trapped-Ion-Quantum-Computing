@@ -576,9 +576,23 @@ It is strongle encouraged that the reader perform a similar procedure to show th
 \]
 </p>
 
-<button class="collapsible">Exercise 2.4</button>
+<button class="collapsible">Exercise 2.4 Stability in $x$ and $y$</button>
 <div class="content-box">
-Explain why the signs of the Mathieu parameters differ between the x and y equations of motion, and relate this to Laplace’s equation.
+Explain why the signs of the Mathieu parameters differ between the $x$ and $y$ equations of motion, and relate this to Laplace’s equation.
+</div>
+
+<button class="collapsible">Exercise 2.5 Effect of RF Frequency Scaling </button>
+<div class="content-box">
+Suppose the RF voltage amplitude $V_{RF}$ is held fixed while the RF drive frequency $\Omega$ is increased by a factor of 2.
+<p>
+1. How does the Mathieu parameter $q$ change?
+</p>
+<p>
+2. How does the secular frequency $\omega_{sec}$ change?
+</p>
+<p>
+3. Qualitatively describe what happens to the micromotion amplitude.
+</p>
 </div>
   
 <p>
@@ -609,6 +623,29 @@ where $A$ is the amplitude, $\omega_{sec} = \frac{q}{2} \frac{\Omega}{\sqrt{2}}$
 <p>
 Note: A similar analysis leading to equation 2.37 can be done for the $y$ equation but as we shall see, we can extend the argument in 2D without loss of generality at the end of the derivation.
 </p>
+
+<button class="collapsible">Exercise 2.6 Interpreting Ion Motion </button>
+<div class="content-box">
+An ion’s measured position is well described by:
+<p>
+\[
+x(t) = A \cos(2 \pi \times 300 \text{kHz} t) [1 + 0.05 \cos(2 \pi \times 30 \text{MHz} t)]
+\]
+<p>
+<p>
+1. Identify the secular frequency.
+</p>
+<p>
+2. Identify the RF drive frequency.
+</p>
+<p>
+3. Estimate the value of the Mathieu parameter $q$.
+</p>
+
+</div>
+
+
+  
 <p>
 <b>The Pseudopotential</b>
 </p>
@@ -741,9 +778,9 @@ Setting equation 2.48 equal to equation 2.43 lets us solve for $A(t)$:
 \]
 </p> 
 
-<button class="collapsible">Exercise 2.5</button>
+<button class="collapsible">Exercise 2.7</button>
 <div class="content-box">
-Show that if the secular displacement $X(t) = 0$, then the micromotion $\xi(t) vanishes identically.
+Show that if the secular displacement $X(t) = 0$, then the micromotion $\xi(t)$ vanishes identically.
 Explain the physical significance of this result.
 </div>
   
@@ -878,97 +915,8 @@ Lastly, this can be extended to 2 dimensions yielding:
 </p>
 
 
-
-
-
-
-
-
-
-  
 <hr>
 
-<h2>2.5 Equations of Motion</h2>
-
-<p>
-The motion of an ion in an electric field is governed by Newton’s second law. Substituting the quadrupole potential into the force law leads to a set of coupled, time-dependent differential equations.
-</p>
-
-<p><span class="eq-placeholder">(2.3) [Insert equation of motion for x-direction]</span></p>
-<p><span class="eq-placeholder">(2.4) [Insert equation of motion for y-direction]</span></p>
-
-<p>
-After introducing dimensionless parameters and rescaling time, these equations take a standard mathematical form known as the Mathieu equation.
-</p>
-
-<p>
-We do not derive this result here. A full derivation starting from the electric potential and leading to the Mathieu equation is provided in Appendix A.
-</p>
-
-<hr>
-
-<h2>2.6 The Mathieu Equation</h2>
-
-<p>
-The canonical Mathieu equation has the form:
-</p>
-
-<p><span class="eq-placeholder">(2.5) [Insert Mathieu equation]</span></p>
-
-<p>
-The parameters appearing in this equation encode the physical properties of the trap, including:
-</p>
-
-<ul>
-  <li>ion mass and charge</li>
-  <li>trap geometry</li>
-  <li>RF drive amplitude and frequency</li>
-</ul>
-
-<p>
-Solutions to the Mathieu equation are either stable or unstable depending on the values of these parameters.
-</p>
-
-<figure>
-  <p><i>[Figure 2.2 Placeholder: Mathieu stability diagram]</i></p>
-</figure>
-
-<hr>
-
-<h2>2.7 Secular Motion and Micromotion</h2>
-
-<p>
-In the experimentally relevant regime, the ion’s motion can be separated into two components:
-</p>
-
-<ul>
-  <li>a slow, smooth oscillation called <b>secular motion</b></li>
-  <li>a rapid oscillation at the RF drive frequency called <b>micromotion</b></li>
-</ul>
-
-<p>
-This separation becomes valid when one of the Mathieu parameters is small.
-</p>
-
-<p><span class="eq-placeholder">(2.6) [Insert approximate secular frequency]</span></p>
-
-<p>
-The secular motion resembles that of a particle in a harmonic potential, a fact that will become crucial when we later quantize the ion’s motion.
-</p>
-
-<hr>
-
-<h2>2.8 The Pseudopotential Approximation</h2>
-
-<p>
-Rather than working directly with the full time-dependent equations of motion, it is often convenient to describe the ion as moving in an effective, time-independent potential known as the pseudopotential.
-</p>
-
-<p><span class="eq-placeholder">(2.7) [Insert pseudopotential expression]</span></p>
-
-<p>
-The pseudopotential provides a simple and intuitive picture of ion confinement and allows us to estimate trap depths and motional frequencies.
-</p>
 
 <button class="collapsible">Exercise 2.3</button>
 <div class="content-box">

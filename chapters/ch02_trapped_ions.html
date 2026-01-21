@@ -604,6 +604,20 @@ We now make the standard approximation for the motion of the ion, meaning we app
 </figure>
 </p>
 
+<button class="collapsible">Exercise 2.6 Interpreting Ion Motion </button>
+<div class="content-box">
+A trapped ion exhibits secular motion at frequency $\omega_{sec} = 1.2 \text{MHz}$ when driven with an RF frequency $\Omega = 40 \text{MHz}$.
+<p>
+1. Estimate the Mathieu parameter $q$.
+</p>
+<p>
+2. Determine whether the small-$q$  approximation is justified.
+</p>
+<p>
+3. Explain how increasing $V_{RF}$ would affect both secular motion and micromotion.
+</p>
+</div>
+  
 <p>
 The Mathieu equations are a class of linear differential equations with periodic coefficients. The general solutions to these equations are obtained using <b>Floquet’s theorem</b>, which guarantees solutions of the form of a periodic function multiplied by an exponential. Physically, this analysis explains how a rapidly oscillating field can produce stable, time-averaged confinement. We do not pursue this analysis here; a brief overview of Floquet theory and its application to the Mathieu equation is provided in the Appendix.
 </p>
@@ -623,27 +637,6 @@ where $A$ is the amplitude, $\omega_{sec} = \frac{q}{2} \frac{\Omega}{\sqrt{2}}$
 <p>
 Note: A similar analysis leading to equation 2.37 can be done for the $y$ equation but as we shall see, we can extend the argument in 2D without loss of generality at the end of the derivation.
 </p>
-
-<button class="collapsible">Exercise 2.6 Interpreting Ion Motion </button>
-<div class="content-box">
-An ion’s measured position is well described by:
-<p>
-\[
-x(t) = A \cos(2 \pi \times 300 \text{kHz} t) [1 + 0.05 \cos(2 \pi \times 30 \text{MHz} t)]
-\]
-<p>
-<p>
-1. Identify the secular frequency.
-</p>
-<p>
-2. Identify the RF drive frequency.
-</p>
-<p>
-3. Estimate the value of the Mathieu parameter $q$.
-</p>
-
-</div>
-
 
   
 <p>
@@ -794,6 +787,21 @@ So finally, the mircomotion is governed by:
 \]
 </p> 
 
+<button class="collapsible">Exercise 2.8 Displaced RF Null </button>
+<div class="content-box">
+Suppose a stray static electric field shifts the ion’s equilibrium position away from the RF null by a distance $x_0$.
+<p>
+1. Would micromotion still vanish at $X(t) = 0$?
+</p>
+<p>
+2. How would the micromotion amplitude depend on $x_0$?
+</p>
+<p>
+3. Explain why laser cooling cannot remove this type of micromotion.
+</p>
+</div>
+
+  
 <p>
 Now we consider the kinetic energy of the ion:
 </p>
@@ -844,7 +852,7 @@ The average $\langle sin(\Omega t) \rangle = \langle cos(\Omega t) \rangle = 0$,
 \]
 </p>
 
-<button class="collapsible">Exercise 2.6</button>
+<button class="collapsible">Exercise 2.9</button>
 <div class="content-box">
 Verify explicitly that the following terms vanish under RF averaging:$\langle sin(\Omega t) \rangle$, $\langle cos(\Omega t) \rangle$, $\langle sin(\Omega t)cos(\Omega t) \rangle$, and $\langle sin^2(\Omega t) \rangle$, $\langle cos^2(\Omega t) \rangle$
 </div>
@@ -917,22 +925,14 @@ Lastly, this can be extended to 2 dimensions yielding:
 
 <hr>
 
-
-<button class="collapsible">Exercise 2.3</button>
-<div class="content-box">
-Under what conditions does the pseudopotential approximation break down?
-</div>
-
-<hr>
-
-<h2>2.9 Outlook: From Classical Motion to Quantum Mechanics</h2>
+<h2>Outlook: From Classical Motion to Quantum Mechanics</h2>
 
 <p>
 In this chapter we have treated the ion’s motion classically. However, once the ion is sufficiently cold, its motional degrees of freedom must be described quantum mechanically.
 </p>
 
 <p>
-In the next chapter we will quantize the ion’s motion, introduce phonon modes, and connect this picture to the internal electronic states of the ion. These ingredients together form the foundation of trapped-ion quantum computation.
+In the next section we will quantize the ion’s motion, introduce phonon modes, and connect this picture to the internal electronic states of the ion. These ingredients together form the foundation of trapped-ion quantum computation.
 </p>
 
 <br><br>

@@ -155,7 +155,7 @@ Upon substituting equation 3.7 into equation 3.6 we arrive at:
 You may remember from introductory quantum mechanics that the harmonic oscillator can be solved algebraically using ladder operators. This approach not only simplifies the calculation of energy eigenvalues, but also reveals a deep physical structure underlying the motion. We now apply this method to the axial motion of a trapped ion.
 </p>
 <p>
-Our goal is to express the Hamiltonian in terms of operators that raise or lower the energy of a given motional state by a fixed amount. The so-called <b>ladder operators</b> are defined as:
+Our goal is to express the Hamiltonian in terms of operators that raise or lower the energy of a given motional state by a fixed amount. Then, the so-called <b>ladder operators</b> are defined as:
 </p>
 
 <p>
@@ -179,9 +179,20 @@ m \omega_z \hat Z - i \hat P_Z
 \]
 </p>
 
-  
+<p>
+The ladder operators are dimensionless, linear combinations of position and momentum constructed by P. A. M. Dirac to simplify the Hamilitonian. It should be noted and verified by the reader the $[\hat a, \hat a^\dagger] = 1 which follows from the canonical commutation relation $[\hat Z, \hat P_Z] = i \hbar$.
+</p>  
 
-
-
-  
+<p>
+The exercise below requires verification of the following:
+</p>
+<p>
+\[
+\ \hat H = \frac{\hat P_Z^2}{2m} + \frac{1}{2} m \omega_z^2 \hat Z^2 = \hbar \omega_z (\hat a^\dagger \hat a + \frac{1}{2})
+\tag{3.10}
+\]
+</p>
+<p>
+Perhaps the easiest way is to simply plug in the ladder operators and brute force the algebra keeping the commutation relation in mind.
+</p>
   

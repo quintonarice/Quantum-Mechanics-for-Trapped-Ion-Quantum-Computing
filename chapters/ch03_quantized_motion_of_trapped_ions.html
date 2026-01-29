@@ -223,7 +223,8 @@ Using the commutation of $\hat H$ and $\hat a$ we have:
 <p>
 \[
 \begin{align}
-\ [\hat H, \hat a] & = \hbar \omega_z \big (\hat a^\dagger \hat a + \frac{1}{2}) \hat a - \hat a \big (\hat a^\dagger \hat a + \frac{1}{2}) \\
+\ [\hat H, \hat a] & = \hat H \hat a - \hat a \hat H \\
+& = \hbar \omega_z \big (\hat a^\dagger \hat a + \frac{1}{2}) \hat a - \hat a \big (\hat a^\dagger \hat a + \frac{1}{2}) \\
 & = \hbar \omega_z \big (\hat a^\dagger \hat a \hat a - \hat a \hat a^\dagger \hat a) \\
 & = -\hbar \omega_z \hat a
 \end{align}
@@ -232,10 +233,59 @@ Using the commutation of $\hat H$ and $\hat a$ we have:
 </p>
 
 <p>
-where we have used the $[\hat a, \hat a^\dagger] = 1$ to express $\hat a \hat a^\dagger = \hat a^\dagger \hat a + 1$
+where we have used $[\hat a, \hat a^\dagger] = 1$ to express $\hat a \hat a^\dagger = \hat a^\dagger \hat a + 1$. Now we have:
+</p>
+
+<p>
+\[
+\ [\hat H, \hat a] & = \hat H \hat a - \hat a \hat H \right arrow \hat H \hat a = \hat a \hat H - \hbar \omega_z \hat a
+\tag{3.13}
+\]
+</p>
+
+<p>
+\[
+\begin{align}
+\ \big (\hat H \hat a ) | E \rangle & = \big (\hat a \hat H - \hbar \omega_z \hat a ) | E \rangle \\
+& = \hat a \hat H | E \rangle - \hbar \omega_z \hat a | E \rangle \\
+\tag{3.14}
+\end{align}
+\]
+</p>  
+<p>
+Noticing that $\hat H | E \rangle = E | E \rangle$ from equation 1.65 we have:
+</p>
+
+<p>
+\[
+\begin{align}
+\ \big (\hat H \hat a ) | E \rangle & = \hat a E | E \rangle - \hbar \omega_z \hat a | E \rangle \\
+& = \big ( E - \hbar \omega_z ) \big (\hat a | E \rangle \\
+\tag{3.15}
+\end{align}
+\]
 </p>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <p>
 Following the standard approach, we define the <b>number operator</b>:
 </p>

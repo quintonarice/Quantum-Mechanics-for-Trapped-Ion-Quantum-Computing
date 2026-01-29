@@ -276,7 +276,7 @@ So upon acting $\hat H$ upon $\hat a | E \rangle$ the same ket is returned multi
 </p>
   
 <p>
-So we say that $\hat a$ has lowered the energy by $\hbar \omega_z$ and changed the corresponding eigenstate. Note that this new eigenstate is not normalized so we write $\hat a | E \rangle \propto | E - \hbar \omega_z \rangle$.
+So we say that $\hat a$ has lowered the energy by $\hbar \omega_z$ and changed the corresponding eigenstate. Note that this new eigenstate is not normalized because $\hat a$ and $\hat a^\dagger$ are not unitary operators and therefore do not preserve normalization. So we write $\hat a | E \rangle \propto | E - \hbar \omega_z \rangle$.
 </p>
   
 <button class="collapsible">Exercise 3.2</button>
@@ -287,7 +287,7 @@ Show that the action of $\hat a^\dagger$ on an eigenstate of $\hat H$ produces a
 </div>
 
 <p>
-In quantum mechanics the total energy cannot of a particle cannot be below the potential energy minimum which ultimately means that the lowest energy state must not go below $E = 0$. This puts restrictions on the lowering operator as we shall see. We require then that:
+In quantum mechanics, the Hamiltonian must be bounded from below. If repeated application of the lowering operator produced arbitrarily negative energies, the theory would be unphysical. This puts restrictions on the lowering operator as we shall see. We require then that:
 </p>
 
 <p>
@@ -313,7 +313,7 @@ where $|E_0\rangle$ is the lowest possible energy state. This expression is ofte
 </p>
   
 <p>
-Where in the second line we used equation 3.17, $\hat a | E_0 \rangle = 0$, to cancel the first term. This well known result shows that the lowest possible energy is not zero! Rather, $E_0 = \frac{1}{2} \hbar \omega_z$, known as the <b>zero-point energy</b> of the quantum harmonic oscillator.
+Where in the second line we used equation 3.16, $\hat a | E_0 \rangle = 0$, to cancel the first term. This well known result shows that the lowest possible energy is not zero! Rather, $E_0 = \frac{1}{2} \hbar \omega_z$, known as the <b>zero-point energy</b> of the quantum harmonic oscillator.
 </p>
   
 <p>
@@ -399,7 +399,7 @@ where we define $\hat a^\dagger \hat a$ as the <b>number operator</b>:
   
 <p>
 \[
-\ \hat N \equiv \hat a^\dagger a
+\ \hat N \equiv \hat a^\dagger \hat a
 \tag{3.24}
 \]
 </p>
@@ -427,7 +427,7 @@ Which of course means we can rewrite the Hamiltonian in terms of the number oper
 </p>
 
 <p>
-The states $|n\rangle$ represent quantized motional energy levels of the trapped ion and are also known as <b>motional number state</b>. In the next section, we interpret these discrete motional energy excitations as quanta of vibrational motion and introduce the concept of <b>phonons</b>.
+The states $|n\rangle$ represent quantized motional energy levels of the trapped ion and are also known as <b>motional number states</b>. In the next section, we interpret these discrete motional energy excitations as quanta of vibrational motion and introduce the concept of <b>phonons</b>.
 </p>
 
 <p>

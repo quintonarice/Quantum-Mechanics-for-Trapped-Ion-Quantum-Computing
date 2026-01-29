@@ -371,89 +371,63 @@ where $n = 0, 1, 2, 3, ...$
 As is common practice we use the quantum number $n$ to label the the energy eigenstates so that $|E_n\rangle = | n \rangle$.
 </p>
 
-
-
-
-
-
-  
 <p>
-Following the standard approach, we define the <b>number operator</b>:
+Now we can write the energy eigenvalue equation for the quantum harmonic oscillator as:
 </p>
 
+<p>
+\[
+\ \hat H | n \rangle = E_n | n \rangle
+\tag{3.22}
+\]
+</p>
+
+<p>
+Plugging in the Hamiltonian from equation 3.10 and the energy eigenvalues from equation 3.21 we obtain a new eigenvalue equation:
+</p>
+
+<p>
+\[
+\ \hat a^\dagger \hat a | n \rangle = n | n \rangle
+\tag{3.23}
+\]
+</p>
+
+<p>
+where we define $\hat a^\dagger \hat a$ as the <b>number operator</b>:
+</p>
+  
 <p>
 \[
 \ \hat N \equiv \hat a^\dagger a
-\tag{3.11}
+\tag{3.24}
 \]
 </p>
 
 <p>
-If we now compute the commutators $[\hat N, \hat a]$ and $[\hat N, \hat a^\dagger]$, we see that:
-</p>
-
-<p>
-\[
-\begin{align}
-\ [\hat N, \hat a] &= -\hat a \\
-  [\hat N, \hat a^\dagger] &= +\hat a^\dagger \\
-\end{align}
-\tag{3.12}
-\]
-</p>
-
-This means that $\hat a$ lowers eigenvalues of $\hat N$ while $\hat a^\dagger$ raises eigenvalues of $\hat N$.
-
-<button class="collapsible">Exercise 3.2</button>
-<div class="content-box">
-<p>
-(a) Show that if <b>one</b> eigenstate, $|\lambda\rangle$, exists: $\hat N|\lambda\rangle = \lambda |\lambda\rangle$ then there must be an infinte ladder.
-</p>
-<p>
-(b) Compute the expectation value of $\hat N$ and show that the eigenvalues $\lambda \rightarrow 0,1,2...$
-</p>
-</div>
-
-<p>
-Based on Exercise 3.2, we now have an eigenvalue equation where we have switched to the common notation $\lambda \rightarrow n$:
-</p>
-
-<p>
-\[
-\ \hat N |n\rangle = n|n\rangle
-\tag{3.13}
-\]
-</p>
-
-<p>
-Therefore:
+So that:
 </p>
   
 <p>
 \[
-\ \hat H |n\rangle = \hbar \omega_z \big(\hat a^\dagger \hat a +\frac{1}{2}) |n\rangle = \hbar \omega_z \big(n + \frac{1}{2}) |n\rangle
-\tag{3.14}
+\ \hat N | n \rangle = n | n \rangle
+\tag{3.25}
 \]
 </p>
-
+  
 <p>
-So that the energy eigenvalues:
+Which of course means we can rewrite the Hamiltonian in terms of the number operator:
 </p>
 
 <p>
 \[
-\ E_n = \hbar \omega_z \big(n + \frac{1}{2})
-\tag{3.15}
+\ \hat H = \hbar \omega_z \big (N + \frac{1}{2})
+\tag{3.26}
 \]
 </p>
 
 <p>
-A well known result which is absolutely worth deriving. This result means that the axial motion is <b>quantized</b>, where each quantum of energy $\hbar \omega_z$ corresponds to one excitation. Amazingly, even when $n = 0$ the ion has <b>zero-point motion</b> with energy $E_0 = \frac{1}{2} \hbar \omega_z$.
-</p>
-
-
-<p>
-The states $|n\rangle$ represent quantized motional energy levels of the trapped ion and are known as <b>motional number state</b>. In the next section, we interpret these discrete motional energy excitations as quanta of vibrational motion and introduce the concept of <b>phonons</b>.
+The states $|n\rangle$ represent quantized motional energy levels of the trapped ion and are also known as <b>motional number state</b>. In the next section, we interpret these discrete motional energy excitations as quanta of vibrational motion and introduce the concept of <b>phonons</b>.
 </p>
 
 <p>
@@ -482,7 +456,6 @@ These relations make explicit that position and momentum are built from creation
 \tag{3.17}
 \]
 </p>
-
 
 
 
